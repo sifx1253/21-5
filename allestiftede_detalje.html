@@ -165,18 +165,17 @@
         <h1 class="overskrift"></h1>
         <h2 class="firstunderoverskrift"></h2>
         <p class="firsttekst"></p>
-        <h2 class="andenunderoverskrift"></h2>
-        <img class="firstinfografik" alt="">
 
-        <p class="landene"></p>
-        <h2 class="tredjeunderoverskrift"></h2>
+        <h2 class="andenunderoverskrift"></h2>
+
+
         <p class="andentekst"></p>
-        <p class="andelspris"></p>
+        <p class="tredjeunderoverskrift"></p>
         <p class="tredjetekst"></p>
-        <img class="andeninfografik">
+        <img class="fjerdeunderoverskrift">
+        <p class="fjerdetekst"></p>
+        <p class="femteunderoverskrift"></p>
         <p class="femtetekst"></p>
-        <p class="citat"></p>
-        <p class="sjettetekst"></p>
     </main>
     <!-- Footer CONTENT -->
 
@@ -237,7 +236,7 @@
         document.addEventListener("DOMContentLoaded", start)
 
         async function start() {
-            let jsonData = await fetch(`http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/ejerforeninger/${id}`);
+            let jsonData = await fetch(`http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/allestiftede/${id}`);
             destination = await jsonData.json();
 
             visTilbage();
@@ -247,21 +246,21 @@
         function visDestination() {
             document.querySelector(".overskrift").textContent = destination.overskrift;
             document.querySelector(".firstunderoverskrift").textContent = destination.firstunderoverskrift;
-            document.querySelector(".firsttekst").textContent = destination.firsttekst;
+
             document.querySelector(".andenunderoverskrift").textContent = destination.andenunderoverskrift;
             document.querySelector(".tredjeunderoverskrift").textContent = destination.tredjeunderoverskrift;
-            document.querySelector(".landene").textContent = destination.landene;
+            document.querySelector(".fjerdeunderoverskrift").textContent = destination.fjerdeunderoverskrift;
+            document.querySelector(".femteunderoverskrift").textContent = destination.femteunderoverskrift;
+
+
+            document.querySelector(".firsttekst").textContent = destination.firsttekst;
             document.querySelector(".andentekst").textContent = destination.andentekst;
-            document.querySelector(".andelspris").textContent = destination.andelspris;
             document.querySelector(".tredjetekst").textContent = destination.tredjetekst;
+            document.querySelector(".fjerdetekst").textContent = destination.fjerdetekst;
             document.querySelector(".femtetekst").textContent = destination.femtetekst;
-            document.querySelector(".citat").textContent = destination.citat;
-            document.querySelector(".sjettetekst").textContent = destination.sjettetekst;
-            document.querySelector("#splash").textContent = destination.billede;
+            document.querySelector("#splash").textContent = destination.splash;
 
 
-            document.querySelector(".firstinfografik").src = destination.firstinfografik.guid;
-            document.querySelector(".andeninfografik").src = destination.andeninfografik.guid;
 
         }
 

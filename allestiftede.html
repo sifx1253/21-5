@@ -209,8 +209,8 @@
                 let clone = template.cloneNode(true).content;
 
                 clone.querySelector(".overskrift").textContent = destination.overskrift;
-                clone.querySelector("#splash").src = destination.splash.guid;
-                clone.querySelector(".firsttekst").textContent = destination.beskrivelse;
+
+                clone.querySelector(".firsttekst").textContent = destination.firsttekst;
 
                 console.log(location.href, destination.id)
 
