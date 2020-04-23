@@ -4,47 +4,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fra skrot til slot</title>
+    <title>Rom</title>
     <link rel="stylesheet" href="css/index.css">
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
-    <style>
-        article {
-            width: 90%;
-            margin: 2vw;
-            position: relative;
-            flex-basis: 400px;
-        }
-
-        .billede {
-            cursor: pointer;
-            width: 100%;
-        }
-
-        .overskrift {
-            color: white;
-            font-weight: 900;
-            position: absolute;
-            left: 15px;
-            font-size: 2.2rem;
-            bottom: 5px;
-            text-shadow: 3px 2px 0px rgba(0, 0, 0, 0.2);
-        }
-
-        #liste {
-            display: flex;
-            flex-direction: row;
-            width: 80vw;
-            flex-wrap: wrap;
-            height: auto;
-            margin: auto;
-        }
-    </style>
-
 </head>
-
 
 <body>
 
@@ -187,111 +153,48 @@
         </div>
     </nav>
 
-
     <!-- CONTENT -->
     <div class="splash_container">
 
-        <img id="splash" src="" alt="">
+        <img class="splash" src="" alt="">
 
     </div>
+    <main id="content">
 
-    <main id="liste"></main>
-
-    <template>
-        <article>
-            <h1 class="overskrift"></h1>
-            <p class="beskrivelse"></p>
-            <img class="billede">
-        </article>
-    </template>
-
-    <footer>
-        <div class="links">
-
-            <a href="#">Nyheder</a>
-            <a href="#">Presse</a>
-            <a href="#">Cookie- og privatpolitik</a>
-            <a href="#">Job</a>
-            <a href="#">Om os</a>
-            <a href="#">Ofte stillede spørgsmål</a>
-        </div>
-        <div class="Kontakt">
-            <p class="lilleOverskrift"></p>
-            <p class="email"></p>
-            <p class="tlf"></p>
-        </div>
-        <div class="someFooter">
-            <img class="facebook"> src="" alt="">
-            <img class="instagram"> src="" alt="">
-        </div>
-
-
-    </footer>
+        <button id="go-back">Go back!</button>
+        <h1 class="overskrift"></h1>
+        <h2 class="underoverskrift"></h2>
+        <p class="beskrivelse"></p>
+        <img class="billede">
+    </main>
 
     <!-- JAVA -->
 
     <script>
+        let urlParams = new URLSearchParams(window.location.search);
+        let id = urlParams.get("id");
+        let pageIndhold;
         document.addEventListener("DOMContentLoaded", start)
 
-        // Samme som før
-        let pages
-        let logo
-
-
-
-
-        let url1 = "http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/skrot-lande";
-        let url2 = "http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/media/220";
-
-
-
-        // Samme som før
         async function start() {
-            let response1 = await fetch(url1);
-            let response2 = await fetch(url2);
-            pages = await response1.json();
-            logo = await response2.json();
-            visPages();
-            visLogo();
+            let jsonData = await fetch(`http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/okonomi/${id}`);
+            pageIndhold = await jsonData.json();
+            visDestination();
+            visTilbage();
         }
 
+        function visDestination() {
+            document.querySelector(".overskrift").textContent = pageIndhold.overskrift;
+            document.querySelector(".underoverskrift").textContent = pageIndhold.underoverskrift;
+            document.querySelector(".splash").src = pageIndhold.splash.guid;
+            document.querySelector(".beskrivelse").textContent = pageIndhold.tekst;
 
-        // Samme som før
-        function visPages() {
-            console.log("JSON forberedes")
+        }
 
-            let liste = document.querySelector("#liste");
-            let template = document.querySelector("template");
-
-            pages.forEach(page => {
-                let clone = template.cloneNode(true).content;
-
-                // Samme som før - Henvis til de elementer som skal hentes.
-                clone.querySelector(".overskrift").textContent = page.overskrift;
-                clone.querySelector(".billede").src = page.splash.guid;
-
-                console.log("Kategori og slug hentes ned")
-                console.log(page, page.slug)
-
-                clone.querySelector("article").addEventListener("click", () => {
-
-                    location.href = `skrot_detalje.html?id=${page.id}`;
-
-                })
-
-                liste.appendChild(clone);
+        function visTilbage() {
+            document.getElementById('go-back').addEventListener('click', () => {
+                history.back();
             });
-            console.log("Husk nu at rette HTMLen!")
-        }
-
-
-
-        // Permanent indhold hentes i Footer funktionenen
-
-        function visLogo() {
-            console.log("billeder loades")
-            document.querySelector("#logo").src = logo.source_url;
-
         }
     </script>
 
