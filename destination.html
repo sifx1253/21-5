@@ -156,7 +156,7 @@
     <!-- CONTENT -->
     <div class="splash_container">
 
-        <img class="splash" src="" alt="">
+        <img id="splash">
 
 
     </div>
@@ -248,7 +248,7 @@
 
 
             document.querySelector(".billede").src = destination.billede.guid;
-            document.querySelector(".splash").src = destination.splash_billede.guid;
+            document.querySelector("#splash").src = destination.splash.guid;
 
             document.querySelector(".firstbeskrivelse").textContent = destination.firstbeskrivelse;
             document.querySelector(".andenbeskrivelse").textContent = destination.andenbeskrivelse;
