@@ -244,6 +244,19 @@ article {
 }
 
 /* NAV elementer */
+.hidden {
+
+    display: none;
+}
+
+#menuknap {
+
+    display: inline-block;
+    color: black;
+    margin: 0.5rem;
+
+}
+
 nav {
     position: relative;
     display: flex;
@@ -524,3 +537,63 @@ splash_container {
     }
 
 }
+
+@media only screen and (min-width:800px) {
+
+
+
+    /*----Generalet-----*/
+    section {
+        margin: 0 auto;
+    }
+
+
+
+    #menuknap {
+        display: none;
+    }
+
+
+
+    .hidden {
+        transform: translateX(0);
+        opacity: 1;
+        display: inline-block;
+    }
+
+
+
+    header {
+        width: 100%;
+    }
+
+
+
+    header li {
+        display: inline-block;
+        letter-spacing: 1px;
+        margin-left: 2vw;
+    }
+
+
+
+    /*   header nav {
+       width: 100vw;
+       height: 50px;
+   }*/
+
+
+
+    ul {
+        margin-top: 0em;
+        margin-right: 1rem;
+    }
+
+
+
+    header nav li {
+        padding: 0.2rem;
+        /*background-color: transparent;*/
+        /*margin: 0.2rem;*/
+        text-decoration: none;
+    }
