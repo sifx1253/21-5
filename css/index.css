@@ -460,4 +460,8 @@ splash_container {
         column-count: 2;
     }
 
+    #tileContainer {
+        flex-direction: row;
+        margin-left: 15vw;
+    }
 }
