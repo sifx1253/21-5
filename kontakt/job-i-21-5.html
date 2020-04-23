@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hvor tjener 21-5 sine penge?</title>
+    <title>Job i 21-5</title>
     <link rel="stylesheet" href="css/index.css">
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -188,32 +188,32 @@
 
 
         // LAV EN VARIABLE TIL AT BEGYNDE MED
-        let hvor
+        let job
         let logo
 
         // SKRIV JSON URL IND HER OG FORBIND MED VARIABEL
         //Find ID her: http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/posts?per_page=100
         // CTRL+F/Søg i vieweren efter pagens slug, så finder du den hurtigt
-        let url1 = "http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/pages/1857";
+        let url1 = "http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/pages/293";
         let url2 = "http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/media/220";
 
         // HER TILSKRIVES OVENSTÅENDE VARIIABLE OG DENS FUNKTION SKAL STARTES
         async function start() {
             let response1 = await fetch(url1);
             let response2 = await fetch(url2);
-            hvor = await response1.json();
+            job = await response1.json();
             logo = await response2.json();
-            visHvor();
+            visjob();
             visLogo();
         }
 
         // FUNKTION HENTER DATA - HENVISER TIL ID, CLASS ELLER TAG I HTML'EN - TAG HØJDE FOR TEXTCONTENT, INNERHTML, SRC OSV.
         // HENT DATA VIA DEN TIDLIGERE VARIABEL
 
-        function visHvor() {
+        function visjob() {
             console.log("Page data loades")
-            document.querySelector("#brødtekst").innerHTML = hvor.content.rendered;
-            document.querySelector("#splash").src = hvor.better_featured_image.source_url;
+            document.querySelector("#brødtekst").innerHTML = job.content.rendered;
+            document.querySelector("#splash").src = job.better_featured_image.source_url;
 
         }
 
@@ -227,3 +227,7 @@
 
 
     <!-- HTML SLUT -->
+
+</body>
+
+</html>

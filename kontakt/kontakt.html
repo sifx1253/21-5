@@ -4,12 +4,43 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hvor tjener 21-5 sine penge?</title>
+    <title>Fra Skrot Til Slot-Oversigt</title>
     <link rel="stylesheet" href="css/index.css">
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <style>
+        article {
+            width: 90%;
+            margin: 2vw;
+            position: relative;
+            flex-basis: 400px;
+        }
 
+        .billede {
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .overskrift {
+            color: white;
+            font-weight: 900;
+            position: absolute;
+            left: 15px;
+            font-size: 2.2rem;
+            bottom: 5px;
+            text-shadow: 3px 2px 0px rgba(0, 0, 0, 0.2);
+        }
+
+        #liste {
+            display: flex;
+            flex-direction: row;
+            width: 80vw;
+            flex-wrap: wrap;
+            height: auto;
+            margin: auto;
+        }
+    </style>
 </head>
 
 <body>
@@ -38,7 +69,7 @@
 
             <div class="dropdown">
                 <button class="dropbtn">
-                    <a href="destinationer.html">Destinationer</a>
+                    <a href="pages.html">Destinationer</a>
                     <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
@@ -169,61 +200,98 @@
     </nav>
 
     <!-- CONTENT -->
-    <div class="splash_container">
 
-        <img id="splash" src="" alt="">
+    <main id="liste"></main>
 
-    </div>
-
-    <main id="tekst_container">
-        <h1 id="overskrift"></h1>
-        <p id="brødtekst"></p>
-    </main>
-
+    <template>
+        <article>
+            <h1 class="overskrift"></h1>
+            <img class="billede">
+        </article>
+    </template>
 
     <!-- JAVA -->
 
     <script>
         document.addEventListener("DOMContentLoaded", start)
 
-
-        // LAV EN VARIABLE TIL AT BEGYNDE MED
-        let hvor
+        // Samme som før
+        let pages
         let logo
 
-        // SKRIV JSON URL IND HER OG FORBIND MED VARIABEL
-        //Find ID her: http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/posts?per_page=100
-        // CTRL+F/Søg i vieweren efter pagens slug, så finder du den hurtigt
-        let url1 = "http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/pages/1857";
+
+        // Loopview'et henter title og splash billede fra de pages, vi har lavet.1. Lav en kategori i WordpressPages -> Categories -> Add New
+        //
+        // 2.Tilføj pages til kategori. Pages -> Find page -> Sæt hak i Kategori ude til højre.
+        //
+        // 3.Find kategoriens ID her:
+        // http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/categories/
+        //
+        // Indsæt ID i denne URL - Eksempelvis Kategori 4 - Fra Skrot til Slot:
+        // http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/pages?categories=4
+        //
+        // ALLE PAGES SKAL HAVE FEATURED IMAGE - Det bruges til SPLASH og Baggrund på loopview
+        // Klik på loopview henviser til SLUG-NAVN.html, så nu skal vores 03.01, 03.02 skiftes ud med slug'en.
+        //
+        // DONE. Det var det.
+
+
+        let url1 = "http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/pages?categories=7";
         let url2 = "http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/media/220";
 
-        // HER TILSKRIVES OVENSTÅENDE VARIIABLE OG DENS FUNKTION SKAL STARTES
+
+
+        // Samme som før
         async function start() {
             let response1 = await fetch(url1);
             let response2 = await fetch(url2);
-            hvor = await response1.json();
+            pages = await response1.json();
             logo = await response2.json();
-            visHvor();
+            visPages();
             visLogo();
         }
 
-        // FUNKTION HENTER DATA - HENVISER TIL ID, CLASS ELLER TAG I HTML'EN - TAG HØJDE FOR TEXTCONTENT, INNERHTML, SRC OSV.
-        // HENT DATA VIA DEN TIDLIGERE VARIABEL
 
-        function visHvor() {
-            console.log("Page data loades")
-            document.querySelector("#brødtekst").innerHTML = hvor.content.rendered;
-            document.querySelector("#splash").src = hvor.better_featured_image.source_url;
+        // Samme som før
+        function visPages() {
+            console.log("JSON forberedes")
 
+            let liste = document.querySelector("#liste");
+            let template = document.querySelector("template");
+
+            pages.forEach(page => {
+                let clone = template.cloneNode(true).content;
+
+                // Samme som før - Henvis til de elementer som skal hentes.
+                clone.querySelector(".overskrift").textContent = page.title.rendered;
+                clone.querySelector(".billede").src = page.better_featured_image.source_url;
+
+                console.log("Kategori og slug hentes ned")
+                console.log(page, page.slug)
+
+                clone.querySelector("article").addEventListener("click", () => {
+
+                    location.href = `${page.slug}.html`;
+
+                })
+
+                liste.appendChild(clone);
+            });
+            console.log("Husk nu at rette HTMLen!")
         }
+
+
+
+        // Permanent indhold hentes i Footer funktionenen
 
         function visLogo() {
             console.log("billeder loades")
             document.querySelector("#logo").src = logo.source_url;
 
         }
-
     </script>
 
 
     <!-- HTML SLUT -->
+
+</body></html>
