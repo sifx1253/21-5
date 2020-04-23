@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fra Skrot Til Slot-Oversigt</title>
+  <link rel="stylesheet" href="css/index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+    article {
+      width: 90%;
+      margin: 2vw;
+      position: relative;
+      flex-basis: 400px;
+    }
+
+    .billede {
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .overskrift {
+      color: white;
+      font-weight: 900;
+      position: absolute;
+      left: 15px;
+      font-size: 2.2rem;
+      bottom: 5px;
+      text-shadow: 3px 2px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    #liste {
+      display: flex;
+      flex-direction: row;
+      width: 80vw;
+      flex-wrap: wrap;
+      height: auto;
+      margin: auto;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV med udgangspunkt i denne fremgangsmåde: https://www.w3schools.com/howto/howto_css_dropdown.asp
+ Her er to navbars, som deler NAV'en op i to.-->
+  <nav>
+    <a class="forside-link" href="index.html">
+      <img id="logo" src="logo" alt="">
+    </a>
+
+    <div class="top_navbar">
+
+      <a href="index.html">
+        <img id="language" src="language" alt="">
+      </a>
+
+
+      <a href="index.html">
+        <img id="user-login" src="user-login" alt="">
+      </a>
+
+    </div>
+
+    <div class="btm_navbar">
+
+      <div class="dropdown">
+        <button class="dropbtn">
+          <a href="pages.html">Destinationer</a>
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="#">Mallorca</a>
+          <a href="#">Marbella</a>
+          <a href="#">Toscana</a>
+          <a href="#">Sydfrankrig</a>
+          <a href="#">Chamonix</a>
+          <a href="#">New York</a>
+          <a href="#">Barcelona</a>
+          <a href="#">Paris</a>
+          <a href="#">Rom</a>
+        </div>
+      </div>
+
+
+
+      <div class="dropdown">
+        <button class="dropbtn">
+          <a href="vores_boliger.html">Vores boliger</a>
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="#">Feriebolig på Mallorca</a>
+          <a href="#">Feriebolig i Sydspanien</a>
+          <a href="#">Feriebolig i Toscana</a>
+          <a href="#">Feriebolig i Sydfrankrig</a>
+          <a href="#">Feriebolig i Chamonix</a>
+          <a href="#">Feriebolig i Barcelona</a>
+          <a href="#">Feriebolig i Paris</a>
+          <a href="#">Feriebolig i Rom</a>
+        </div>
+      </div>
+
+
+      <div class="dropdown">
+        <button class="dropbtn">
+          <a href="skrot_til_slot.html">Fra Skrot til Slot</a>
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="03.01.00.html">Udvælgelse</a>
+          <a href="03.02.00.html">Istandsættelse</a>
+          <a href="03.03.00.html">Indretning</a>
+          <a href="03.04.00.html">Klargøring</a>
+          <a href="03.05.00.html">Vi skaber hjem</a>
+        </div>
+      </div>
+
+
+
+
+      <div class="dropdown">
+        <button class="dropbtn">
+          <a href="hvorfor.html">Hvorfor 21-5?</a>
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="04.01.00.html">Hvordan sælger vi vores andel igen?</a>
+          <a href="04.02.00.html">Derfor købe en andel?</a>
+          <a href="04.03.00.html">Hvordan kommer vi med?</a>
+          <a href="04.04.00.html">I binder jer først endeligt når i har mødt de andre familier</a>
+          <a href="04.05.00.html">Fordi det giver mening</a>
+          <a href="04.06.00.html">Bookingsystemet fordeling af ugerne (fed knap)</a>
+          <a href="04.07.00.html">Skab nye familietraditioner</a>
+          <a href="04.08.00.html">Fællesskab i foreningerne</a>
+        </div>
+      </div>
+
+
+      <div class="dropdown">
+        <button class="dropbtn">
+          <a href="foreninger.html">Foreninger</a>
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="05.01.00.html">Se alle 21-5 stiftede foreninger</a>
+          <a href="05.02.00.html">Ejerforeninger</a>
+          <a href="05.03.00.html">Gensalg</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button class="dropbtn">
+          <a href="oekonomi.html">Økonomi</a>
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="06.01.00.html">Skat</a>
+          <a href="06.02.00.html">Finansiering</a>
+          <a href="06.03.00.html">Investering</a>
+          <a href="06.04.00.html">Intet besvær og reelt ejerskab</a>
+          <a href="06.05.00.html">Administration hvad dækker fællesudgifterne</a>
+          <a href="06.06.00.html">Meget mere for pengene</a>
+          <a href="06.07.00.html">Hvor tjener 21-5 sine penge?</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button class="dropbtn">
+          <a href="om_os.html">Om Os</a>
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="07.01.00.html">21-5 Teamet</a>
+          <a href="07.02.00.html">Hvem er 21-5 for?</a>
+          <a href="07.03.00.html">Det siger vores 21-5 familier</a>
+          <a href="07.04.00.html">Sådan benytter vi vores 21-5 boliger</a>
+          <a href="07.05.00.html">Lidt om 21-5 historien</a>
+          <a href="07.06.00.html">10 års fødselsdag</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button class="dropbtn">
+          <a href="kontakt.html">Kontakt</a>
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="08.01.00.html">Job i 21-5</a>
+          <a href="08.02.00.html">Kaffemøde</a>
+          <a href="08.03.00.html">Ofte stillede spørgsmål</a>
+          <a href="08.04.00.html">Orienteringsmøde</a>
+        </div>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- CONTENT -->
+
+  <main id="liste"></main>
+
+  <template>
+    <article>
+      <h1 class="overskrift"></h1>
+      <img class="billede">
+    </article>
+  </template>
+
+  <!-- JAVA -->
+
+  <script>
+    document.addEventListener("DOMContentLoaded", start)
+
+    // Samme som før
+    let pages
+    let logo
+
+
+    // Loopview'et henter title og splash billede fra de pages, vi har lavet.1. Lav en kategori i WordpressPages -> Categories -> Add New
+    //
+    // 2.Tilføj pages til kategori.Pages -> Find page -> Sæt hak i Kategori ude til højre.
+    //
+    // 3.Find kategoriens ID her:
+    // http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/categories/
+    //
+    // Indsæt ID i denne URL - Eksempelvis Kategori 4 - Fra Skrot til Slot:
+    // http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/pages?categories=4
+    //
+    // ALLE PAGES SKAL HAVE FEATURED IMAGE - Det bruges til SPLASH og Baggrund på loopview
+    // Klik på loopview henviser til SLUG-NAVN.html, så nu skal vores 03.01, 03.02 skiftes ud med slug'en.
+    //
+    // DONE. Det var det.
+
+
+    let url1 = "http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/pages?categories=4";
+    let url2 = "http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/media/220";
+
+
+
+    // Samme som før
+    async function start() {
+      let response1 = await fetch(url1);
+      let response2 = await fetch(url2);
+      pages = await response1.json();
+      logo = await response2.json();
+      visPages();
+      visLogo();
+    }
+
+
+    // Samme som før
+    function visPages() {
+      console.log("JSON forberedes")
+
+      let liste = document.querySelector("#liste");
+      let template = document.querySelector("template");
+
+      pages.forEach(page => {
+        let clone = template.cloneNode(true).content;
+
+        // Samme som før - Henvis til de elementer som skal hentes.
+        clone.querySelector(".overskrift").textContent = page.title.rendered;
+        clone.querySelector(".billede").src = page.better_featured_image.source_url;
+
+        console.log("Kategori og slug hentes ned")
+        console.log(page, page.slug)
+
+        clone.querySelector("article").addEventListener("click", () => {
+
+          location.href = `${page.slug}.html`;
+
+        })
+
+        liste.appendChild(clone);
+      });
+      console.log("Husk nu at rette HTMLen!")
+    }
+
+
+
+    // Permanent indhold hentes i Footer funktionenen
+
+    function visLogo() {
+      console.log("billeder loades")
+      document.querySelector("#logo").src = logo.source_url;
+
+    }
+  </script>
+
+
+  <!-- HTML SLUT -->
+
+</body>
+
+</html>
