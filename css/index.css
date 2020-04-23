@@ -246,7 +246,7 @@ article {
 /* NAV elementer */
 .hidden {
 
-    display: none;
+    visibility: hidden;
 }
 
 #menuknap {
@@ -255,6 +255,12 @@ article {
     color: black;
     margin: 0.5rem;
 
+}
+
+#menu {
+    display: block;
+    height: 100vh;
+    width: 70vw;
 }
 
 nav {
@@ -555,11 +561,6 @@ splash_container {
 
 
 
-    .hidden {
-        transform: translateX(0);
-        opacity: 1;
-        display: inline-block;
-    }
 
 
 
