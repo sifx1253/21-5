@@ -250,6 +250,7 @@
             logo = await response2.json();
             visPages();
             visLogo();
+            visPermanentIndhold();
         }
 
 
@@ -268,7 +269,7 @@
                 clone.querySelector(".billede").src = page.better_featured_image.source_url;
 
                 console.log("Kategori og slug hentes ned")
-                console.log(page, page.slug)
+                //                console.log(page, .slug)
 
                 clone.querySelector("article").addEventListener("click", () => {
 
@@ -285,10 +286,20 @@
 
         // Permanent indhold hentes i Footer funktionenen
 
-        function visLogo() {
-            console.log("billeder loades")
-            document.querySelector("#logo").src = logo.source_url;
 
+        function visPermanentIndhold() {
+            console.log("Permanent indhold hentes")
+            document.querySelector("#logo").src = permanentIndhold.billede1.guid;
+            document.querySelector("#language").src = permanentIndhold.billede4.guid;
+            document.querySelector("#user-login").src = permanentIndhold.billede3.guid;
+            document.querySelector("#facebook").src = permanentIndhold.billede5.guid;
+            document.querySelector("#insta").src = permanentIndhold.billede6.guid;
+            console.log("Instragram feed hentes")
+            document.querySelector(".instaBillede1").src = permanentIndhold.billede7.guid;
+            document.querySelector(".instaBillede2").src = permanentIndhold.billede8.guid;
+            document.querySelector(".instaBillede3").src = permanentIndhold.billede9.guid;
+            document.querySelector(".instaBillede4").src = permanentIndhold.billede10.guid;
+            document.querySelector(".instaBillede5").src = permanentIndhold.billede11.guid;
         }
 
     </script>
