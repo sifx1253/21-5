@@ -254,6 +254,9 @@ article {
     display: inline-block;
     color: black;
     margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    float: right;
 
 }
 
@@ -264,6 +267,11 @@ article {
     display: flex;
     flex-direction: column;
     float: right;
+    background-color: white;
+    top: 12vh;
+    left: 32vw;
+    position: absolute;
+
 }
 
 nav {
