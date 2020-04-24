@@ -185,9 +185,23 @@
 
     <!-- CONTENT -->
 
-    <main id="liste"></main>
+    <main id="liste">
 
-    <template>
+    </main>
+    <section id="team">
+
+
+
+    </section>
+    <template id="ansat_temp">
+        <article>
+            <h1 class="navn"></h1>
+            <img class="ansat_billede">
+            <p class="titel"></p>
+        </article>
+    </template>
+
+    <template id="page_temp">
         <article>
             <h1 class="overskrift"></h1>
             <img class="billede">
@@ -202,6 +216,7 @@
         // Samme som før
         let pages
         let logo
+
 
 
         // Loopview'et henter title og splash billede fra de pages, vi har lavet.1. Lav en kategori i WordpressPages -> Categories -> Add New
@@ -225,6 +240,7 @@
 
 
 
+
         // Samme som før
         async function start() {
             let response1 = await fetch(url1);
@@ -233,6 +249,7 @@
             logo = await response2.json();
             visPages();
             visLogo();
+            visTeam();
         }
 
 
@@ -241,7 +258,7 @@
             console.log("JSON forberedes")
 
             let liste = document.querySelector("#liste");
-            let template = document.querySelector("template");
+            let template = document.querySelector("#page_temp");
 
             pages.forEach(page => {
                 let clone = template.cloneNode(true).content;
@@ -263,6 +280,8 @@
             });
             console.log("Husk nu at rette HTMLen!")
         }
+
+
 
 
 
