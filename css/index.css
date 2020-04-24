@@ -326,6 +326,10 @@ nav {
     padding-top: 25px;
 }
 
+.fa {
+    display: block;
+}
+
 .btm_navbar a:hover,
 .dropdown:hover .dropbtn {
     background-color: #f9f9f9;
@@ -354,7 +358,7 @@ nav {
 }
 
 .dropdown:hover .dropdown-content {
-    display: block;
+    /*display: block;*/
 }
 
 /* Tekst elementer */
@@ -561,9 +565,7 @@ splash_container {
 
 
     /*----Generalet-----*/
-    section {
-        margin: 0 auto;
-    }
+
 
 
 
@@ -571,42 +573,23 @@ splash_container {
         display: none;
     }
 
+    #menu {
 
+        height: 6vh;
+        width: 70vw;
+        display: flex;
+        flex-direction: row-reverse;
 
+        background-color: white;
+        padding-right: 4vw;
+        position: static;
 
-
-
-    header {
-        width: 100%;
     }
 
 
 
-    header li {
-        display: inline-block;
-        letter-spacing: 1px;
-        margin-left: 2vw;
-    }
 
 
-
-    /*   header nav {
-       width: 100vw;
-       height: 50px;
-   }*/
-
-
-
-    ul {
-        margin-top: 0em;
-        margin-right: 1rem;
-    }
-
-
-
-    header nav li {
-        padding: 0.2rem;
-        /*background-color: transparent;*/
-        /*margin: 0.2rem;*/
-        text-decoration: none;
+    .dropdown:hover .dropdown-content {
+        display: block;
     }
