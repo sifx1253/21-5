@@ -40,7 +40,6 @@
             height: auto;
             margin: auto;
         }
-
     </style>
 </head>
 
@@ -189,6 +188,8 @@
 
     </main>
 
+
+
     <template id="page_temp">
         <article>
             <h1 class="overskrift"></h1>
@@ -237,7 +238,6 @@
             logo = await response2.json();
             visPages();
             visLogo();
-            visTeam();
         }
 
 
@@ -254,7 +254,6 @@
                 // Samme som før - Henvis til de elementer som skal hentes.
                 clone.querySelector(".overskrift").textContent = page.title.rendered;
                 clone.querySelector(".billede").src = page.better_featured_image.source_url;
-                clone.querySelector(".splash").src = page.better_featured_image.source_url;
 
                 console.log("Kategori og slug hentes ned")
                 console.log(page, page.slug)
@@ -281,12 +280,9 @@
             document.querySelector("#logo").src = logo.source_url;
 
         }
-
     </script>
 
 
     <!-- HTML SLUT -->
 
-</body>
-
-</html>
+</body></html>
