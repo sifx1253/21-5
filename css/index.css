@@ -103,10 +103,10 @@ article {
 
 }
 
-/*
 #liste {
     padding: 50px;
     background-color: white;
+
     position: absolute;
     height: auto;
     width: 1600px;
@@ -116,17 +116,6 @@ article {
     left: 50%;
     top: 61%;
     flex-wrap: wrap;
-}
-*/
-
-#liste {
-    background-color: aqua;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 10px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-gap: 5px;
 }
 
 /* Skrot oversigt LOOPVIEW */
@@ -272,6 +261,9 @@ article {
     display: block;
     height: 100vh;
     width: 70vw;
+    display: flex;
+    flex-direction: column;
+    float: right;
 }
 
 nav {
@@ -292,7 +284,7 @@ nav {
 .btm_navbar {
     height: 50px;
     width: 100vw;
-    overflow: hidden;
+    /*overflow: hidden;*/
     background-color: white;
     z-index: 3;
 }
