@@ -40,6 +40,7 @@
             height: auto;
             margin: auto;
         }
+
     </style>
 </head>
 
@@ -187,18 +188,6 @@
     <main id="liste">
 
     </main>
-    <section id="team">
-
-
-
-    </section>
-    <template id="ansat_temp">
-        <article>
-            <h1 class="navn"></h1>
-            <img class="ansat_billede">
-            <p class="titel"></p>
-        </article>
-    </template>
 
     <template id="page_temp">
         <article>
@@ -234,7 +223,7 @@
         // DONE. Det var det.
 
 
-        let url1 = "http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/pages?categories=6";
+        let url1 = "http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/pages?categories=8";
         let url2 = "http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/media/220";
 
 
@@ -265,6 +254,7 @@
                 // Samme som før - Henvis til de elementer som skal hentes.
                 clone.querySelector(".overskrift").textContent = page.title.rendered;
                 clone.querySelector(".billede").src = page.better_featured_image.source_url;
+                clone.querySelector(".splash").src = page.better_featured_image.source_url;
 
                 console.log("Kategori og slug hentes ned")
                 console.log(page, page.slug)
@@ -291,9 +281,12 @@
             document.querySelector("#logo").src = logo.source_url;
 
         }
+
     </script>
 
 
     <!-- HTML SLUT -->
 
-</body></html>
+</body>
+
+</html>
