@@ -40,7 +40,6 @@
             height: auto;
             margin: auto;
         }
-
     </style>
 </head>
 
@@ -265,7 +264,6 @@
 
                 // Samme som før - Henvis til de elementer som skal hentes.
                 clone.querySelector(".overskrift").textContent = page.title.rendered;
-                clone.querySelector(".billede").src = page.better_featured_image.source_url;
 
                 console.log("Kategori og slug hentes ned")
                 console.log(page, page.slug)
@@ -290,12 +288,9 @@
             document.querySelector("#logo").src = logo.source_url;
 
         }
-
     </script>
 
 
     <!-- HTML SLUT -->
 
-</body>
-
-</html>
+</body></html>
