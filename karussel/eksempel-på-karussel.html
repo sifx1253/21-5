@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="da">
+
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rom</title>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    * {
+      box-sizing: border-box
+    }
+
+    body {
+      font-family: Verdana, sans-serif;
+      margin: 0
+    }
+
+    .mySlides {
+      display: none
+    }
+
+    img {
+      vertical-align: middle;
+    }
+
+    .slideshow-container img {
+      max-height: 800px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    /* Slideshow container */
+
+    .slideshow-container {
+      position: relative;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    /* Next & previous buttons */
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: black;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+      background: rgba(255, 255, 255, 0.9);
+    }
+
+    /* The dots/bullets/indicators */
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+
+    .active,
+    .dot:hover {
+      background-color: #717171;
+    }
+
+    /* Fading animation */
+    .fade {
+      -webkit-animation-name: fade;
+      -webkit-animation-duration: 1.5s;
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+
+    @-webkit-keyframes fade {
+      from {
+        opacity: .4
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    @keyframes fade {
+      from {
+        opacity: .4
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+
+      .prev,
+      .next,
+      .text {
+        font-size: 11px
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <img src="" class="slide1">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="" class="slide2">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="" class="slide3">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="" class="slide4">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="" class="slide5">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="" class="slide6">
+    </div>
+
+
+    <div class="mySlides fade">
+      <img src="" class="slide7">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="" class="slide8">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="" class="slide9">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="" class="slide10">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="" class="slide11">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="" class="slide12">
+    </div>
+
+
+    <div class="mySlides fade">
+      <img src="" class="slide13">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="" class="slide14">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="" class="slide15">
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  </div>
+  <br>
+
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+    <span class="dot" onclick="currentSlide(6)"></span>
+    <span class="dot" onclick="currentSlide(7)"></span>
+    <span class="dot" onclick="currentSlide(8)"></span>
+    <span class="dot" onclick="currentSlide(9)"></span>
+    <span class="dot" onclick="currentSlide(10)"></span>
+    <span class="dot" onclick="currentSlide(11)"></span>
+    <span class="dot" onclick="currentSlide(12)"></span>
+    <span class="dot" onclick="currentSlide(13)"></span>
+    <span class="dot" onclick="currentSlide(14)"></span>
+    <span class="dot" onclick="currentSlide(15)"></span>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", start)
+
+
+    let billeder
+
+    let url1 = "http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/karrusel/430";
+
+    async function start() {
+      let response1 = await fetch(url1);
+      billeder = await response1.json();
+      hentBilleder();
+    }
+
+    function hentBilleder() {
+      console.log(billeder)
+
+      document.querySelector(".slide1").src = billeder.billede1.guid;
+      document.querySelector(".slide2").src = billeder.billede2.guid;
+      document.querySelector(".slide3").src = billeder.billede3.guid;
+      document.querySelector(".slide4").src = billeder.billede4.guid;
+      document.querySelector(".slide5").src = billeder.billede5.guid;
+      document.querySelector(".slide6").src = billeder.billede6.guid;
+      document.querySelector(".slide7").src = billeder.billede7.guid;
+      document.querySelector(".slide8").src = billeder.billede8.guid;
+      document.querySelector(".slide9").src = billeder.billede9.guid;
+      document.querySelector(".slide10").src = billeder.billede10.guid;
+      document.querySelector(".slide11").src = billeder.billede11.guid;
+      document.querySelector(".slide12").src = billeder.billede12.guid;
+      document.querySelector(".slide13").src = billeder.billede13.guid;
+      document.querySelector(".slide14").src = billeder.billede14.guid;
+      document.querySelector(".slide15").src = billeder.billede15.guid;
+      showSlide();
+    }
+
+
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {
+        slideIndex = 1
+      }
+      if (n < 1) {
+        slideIndex = slides.length
+      }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+    }
+  </script>
+
+</body>
+
+</html>
