@@ -44,6 +44,7 @@ article img {
     width: 100%;
 }
 
+/*
 .loopBG {
     height: 100%;
     width: 100%;
@@ -52,6 +53,7 @@ article img {
     top: 0;
     z-index: 99;
 }
+*/
 
 .tile {
     height: 330px;
@@ -86,24 +88,34 @@ article img {
 article {
     overflow: hidden;
     position: relative;
-    height: 200px;
-    width: 400px;
-    margin: 25px;
+    height: 100%;
+    width: 100%;
+    /*    margin: 25px;*/
     background-color: white;
-    padding: 30px;
+    /*    padding: 30px;*/
 
 }
 
 /* TEAM LOOPVIEW */
 #person {
-    height: 400px;
-    width: 400px;
     margin: 25px;
     background-color: white;
     padding: 30px;
 
 }
 
+
+#liste {
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 30px;
+    background-color: #fff;
+    color: #444;
+
+}
+
+/*
 #liste {
     padding: 50px;
     background-color: white;
@@ -117,7 +129,9 @@ article {
     left: 50%;
     top: 61%;
     flex-wrap: wrap;
-}
+}*/
+
+
 
 /* Skrot oversigt LOOPVIEW */
 #skrotOversigt {
