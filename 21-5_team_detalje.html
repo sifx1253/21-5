@@ -166,7 +166,7 @@
 
         <p class="tekst"></p>
         <a class="email" href=""></a>
-        <img class="billede" alt="">
+        <img class="billede">
 
         <p class="profession"></p>
 
@@ -230,7 +230,7 @@
         document.addEventListener("DOMContentLoaded", start)
 
         async function start() {
-            let jsonData = await fetch(`http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/teams/${id}`);
+            let jsonData = await fetch(`http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/teamet/${id}`);
             destination = await jsonData.json();
 
             visTilbage();
@@ -242,9 +242,7 @@
             document.querySelector(".tekst").textContent = destination.tekst;
             document.querySelector(".email").textContent = destination.email;
             document.querySelector(".profession").textContent = destination.profession;
-
             document.querySelector(".billede").src = destination.billede.guid;
-
 
         }
 
