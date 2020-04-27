@@ -115,21 +115,11 @@ article {
 
 }
 
-/*
-#liste {
-    padding: 50px;
-    background-color: white;
+.billede {
+    padding-top: 5vw;
+    width: 70%;
+}
 
-    position: absolute;
-    height: auto;
-    width: 1600px;
-    display: flex;
-    margin-left: -850px;
-    flex-basis: 400px;
-    left: 50%;
-    top: 61%;
-    flex-wrap: wrap;
-}*/
 
 
 
@@ -507,15 +497,17 @@ a {
     padding: 10px;
 }
 
-.splash {
-    width: 100vw;
+#splash {
+    width: 100%;
     max-height: 90vh;
-    max-width: 2000px;
+    max-width: 12000px;
     top: 0;
     left: 0;
     Position: absolute;
     z-index: -99;
 }
+
+
 
 splash_container {
     position: relative;
