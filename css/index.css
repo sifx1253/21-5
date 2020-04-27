@@ -500,7 +500,7 @@ a {
 #splash {
     width: 100%;
     max-height: 90vh;
-    max-width: 2000px;
+    max-width: 1200px;
     top: 0;
     left: 0;
     Position: absolute;
@@ -513,6 +513,14 @@ splash_container {
     position: relative;
     width: 100vw;
 }
+
+/****KONTAKT****/
+#tekst_container {
+    position: absolute;
+    top: 50vw;
+}
+
+
 
 @media screen and (min-width: 600px) {
     .tekstblok2 {
@@ -603,11 +611,12 @@ splash_container {
         position: static;
 
     }
+}
 
 
 
 
 
-    .dropdown:hover .dropdown-content {
-        display: block;
-    }
+.dropdown:hover .dropdown-content {
+    display: block;
+}
