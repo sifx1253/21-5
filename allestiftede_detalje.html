@@ -163,6 +163,7 @@
     <main id="content">
         <button id="go-back">Go back!</button>
         <h1 class="overskrift"></h1>
+        <img class="billede">
         <h2 class="firstunderoverskrift"></h2>
         <p class="firsttekst"></p>
 
@@ -176,6 +177,7 @@
         <p class="fjerdetekst"></p>
         <p class="femteunderoverskrift"></p>
         <p class="femtetekst"></p>
+
     </main>
 
 
@@ -241,13 +243,16 @@
         let permanentIndhold
         document.addEventListener("DOMContentLoaded", start)
         let url2 = "http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/karrusel/781";
+        let url3 = "http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/media/1620";
 
         async function start() {
             let jsonData = await fetch(`http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/allestiftede/${id}`);
             destination = await jsonData.json();
             let response2 = await fetch(url2);
+            let response3 = await fetch(url3);
             permanentIndhold = await response2.json();
-
+            splash = await response3.json();
+            visSplash();
             visTilbage();
             visDestination();
             visPermanentIndhold();
@@ -269,7 +274,7 @@
             document.querySelector(".tredjetekst").textContent = destination.tredjetekst;
             document.querySelector(".fjerdetekst").textContent = destination.fjerdetekst;
             document.querySelector(".femtetekst").textContent = destination.femtetekst;
-            document.querySelector("#splash").textContent = destination.splash;
+            document.querySelector(".billede").src = destination.splash.guid;
 
 
 
@@ -281,6 +286,12 @@
             document.getElementById('go-back').addEventListener('click', () => {
                 history.back();
             });
+        }
+
+        function visSplash() {
+            console.log("splash loades")
+            document.querySelector("#splash").src = splash.guid.rendered;
+
         }
 
         function visPermanentIndhold() {
