@@ -237,6 +237,7 @@
 
         // LAV EN VARIABLE TIL AT BEGYNDE MED
         let tiAar
+        let logo
         let permanentIndhold
 
         // SKRIV JSON URL IND HER OG FORBIND MED VARIABEL
@@ -249,9 +250,11 @@
         async function start() {
             let response1 = await fetch(url1);
             let response2 = await fetch(url2);
+
             tiAar = await response1.json();
             permanentIndhold = await response2.json();
             vistiAar();
+            visLogo();
             visPermanentIndhold();
         }
 
