@@ -461,6 +461,11 @@ a {
 
 }
 
+/*indretning*/
+.billede_indretning img {
+    width: 50%;
+}
+
 /* Content elementer */
 .breaker {
 
