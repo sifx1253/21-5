@@ -175,24 +175,28 @@
 
     </div>
 
-    <main id="tekst_container">
+    <main id="content">
         <h1 id="overskrift"></h1>
         <p id="brødtekst"></p>
     </main>
 
-    <!-- CONTENT -->
-    <div class="splash_container">
+    <section id="sporgsmal">
 
-        <img id="splash" src="" alt="">
 
-    </div>
+        <h1>spørgsmål</h1>
 
-    <div id="content">
-        <main>
-            <h1 id="overskrift"></h1>
-            <p id="brødtekst"></p>
-        </main>
-    </div>
+
+        <button class="accordion">Hvordan kommer man ind?</button>
+        <div class="panel">
+            <p>bla bla</p>
+            <p>bla bla</p>
+            <p>bla bla</p>
+        </div>
+
+
+    </section>
+
+
     <!-- Footer CONTENT -->
     <div class="breaker2">
 
@@ -295,11 +299,24 @@
             document.querySelector(".instaBillede5").src = permanentIndhold.billede11.guid;
         }
 
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
     </script>
 
 
     <!-- HTML SLUT -->
 
-</body>
-
-</html>
+</body></html>
