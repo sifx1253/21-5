@@ -158,17 +158,18 @@
         <img id="splash" src="" alt="">
 
     </div>
+    <h1 class="header">Hvorfor 21-5?</h1>
+    <div id="content">
+        <main id="liste"></main>
 
-    <main id="liste"></main>
-
-    <template>
-        <article>
-            <h1 class="overskrift"></h1>
-            <p class="tekst"></p>
-            <img class="billede">
-        </article>
-    </template>
-
+        <template>
+            <article>
+                <h1 class="overskrift"></h1>
+                <p class="tekst"></p>
+                <img class="billede">
+            </article>
+        </template>
+    </div>
     <!-- Footer CONTENT -->
     <div class="breaker2">
 
@@ -236,14 +237,18 @@
         let url1 = "http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/hvorfor215";
         let url2 = "http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/karrusel/781";
         let url3 = "http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/galleri/398";
+        let url4 = "http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/media/1620";
 
         // HER TILSKRIVES OVENSTÅENDE VARIIABLE OG DENS FUNKTION SKAL STARTES
         async function start() {
             let response1 = await fetch(url1);
             let response2 = await fetch(url2);
             let response3 = await fetch(url3);
+            let response4 = await fetch(url4);
             destinationer = await response1.json();
             permanentIndhold = await response2.json();
+            splash = await response4.json();
+            visSplash();
             visDestinationer();
             visPermanentIndhold();
 
@@ -277,6 +282,12 @@
             });
         }
 
+        function visSplash() {
+            console.log("splash loades")
+            document.querySelector("#splash").src = splash.guid.rendered;
+
+        }
+
 
         function visPermanentIndhold() {
             console.log("Permanent indhold hentes")
@@ -292,9 +303,12 @@
             document.querySelector(".instaBillede4").src = permanentIndhold.billede10.guid;
             document.querySelector(".instaBillede5").src = permanentIndhold.billede11.guid;
         }
+
     </script>
 
 
     <!-- HTML SLUT -->
 
-</body></html>
+</body>
+
+</html>

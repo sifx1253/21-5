@@ -461,6 +461,58 @@ a {
 
 }
 
+/*indretning*/
+.billede_indretning img {
+    width: 50%;
+}
+
+
+/******Online booking*****/
+
+#sporgsmal {
+    padding: 2rem;
+}
+
+.accordion {
+    background-color: #c7aea0;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 20rem;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1.5rem;
+    transition: 0.4s;
+}
+
+.active,
+.accordion:hover {
+    background-color: #a17d6b;
+}
+
+.accordion:after {
+    content: '\002B';
+    color: #453832;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2212";
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+/*SLUT*/
+
 /* Content elementer */
 .breaker {
 
