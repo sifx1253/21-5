@@ -1,9 +1,6 @@
 *,
 body {
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/master
     text-decoration: none;
     padding: 0;
     margin: 0;
@@ -12,10 +9,7 @@ body {
 overflow: -moz-scrollbars-none;
 overflow-x: hidden;*/
     font-family: 'Raleway', sans-serif;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/master
 }
 
 
@@ -40,10 +34,7 @@ overflow-x: hidden;*/
     width: 300px;
     height: 100px;
     background-color: white;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/master
     position: absolute;
     margin: auto;
     z-index: 988;
@@ -72,12 +63,7 @@ article img {
     background-color: #EAEDEA;
     padding: 1vw;
     cursor: pointer;
-<<<<<<< HEAD
-=======
 
-
-
->>>>>>> origin/master
 }
 
 #tileContainer {
@@ -88,11 +74,7 @@ article img {
     top: 20vh;
     display: flex;
     flex-direction: column;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/master
 }
 
 #wrapper {
@@ -108,10 +90,7 @@ article {
     /*    margin: 25px;*/
     background-color: white;
     /*    padding: 30px;*/
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/master
 }
 
 /* TEAM LOOPVIEW */
@@ -119,10 +98,7 @@ article {
     margin: 25px;
     background-color: white;
     padding: 30px;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/master
 }
 
 
@@ -133,10 +109,7 @@ article {
     grid-gap: 30px;
     background-color: #fff;
     color: #444;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/master
 }
 
 .billede {
@@ -154,10 +127,6 @@ article {
     margin: 25px;
     background-color: white;
     padding: 30px;
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/master
 }
 
 .galleri {
@@ -172,17 +141,14 @@ article {
     flex-direction: row;
     margin: 0;
     padding: 0;
-<<<<<<< HEAD
-}
-
-.colWrapper {
-=======
 
 }
 
+.colWrapper {}
+
 .colWrapper {
 
->>>>>>> origin/master
+
     margin: 0;
     padding: 0;
 }
@@ -196,20 +162,14 @@ article {
 .links {
     display: flex;
     flex-direction: column;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/master
 }
 
 .topFooter {
     margin-left: auto;
     margin-right: auto;
     width: 95vw;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/master
     -ms-overflow-style: none;
     overflow: -moz-scrollbars-none;
     overflow-x: hidden;
@@ -231,10 +191,7 @@ article {
     width: 200px;
     height: 200px;
     padding: 2vw;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/master
 }
 
 #facebook {
@@ -292,28 +249,19 @@ article {
 
 /* NAV elementer */
 .hidden {
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/master
     visibility: hidden;
 }
 
 #menuknap {
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/master
     display: inline-block;
     color: black;
     margin: 0.5rem;
     display: flex;
     flex-direction: column;
     float: right;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/master
 }
 
 #menu {
@@ -327,10 +275,7 @@ article {
     top: 12vh;
     left: 50vw;
     position: absolute;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/master
 }
 
 nav {
@@ -462,12 +407,11 @@ a {
 
 .catchphrase {
     position: absolute;
-<<<<<<< HEAD
+
     left: 50%;
     top: 34%;
     margin-left: -225px;
     font-size: 3rem;
-=======
     margin-top: 10vw;
     left: 35%;
     top: 34%;
@@ -482,21 +426,19 @@ a {
     margin-left: -225px;
     font-size: 5rem;
     color: black
->>>>>>> origin/master
 }
 
 .tekstblok1 {}
 
 .tekstblok2 {
-<<<<<<< HEAD
-    column-gap: 40px;
-    column-fill: balance;
-=======
 
     column-gap: 40px;
     column-fill: balance;
 
->>>>>>> origin/master
+    column-gap: 40px;
+    column-fill: balance;
+
+
 }
 
 #underoverskrift {
@@ -513,19 +455,16 @@ a {
     font-size: 2.2rem;
     bottom: 10%;
     left: 10%;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/master
 }
 
 /* Content elementer */
 .breaker {
-<<<<<<< HEAD
+
     height: 1000px;
-=======
-    height: 20vh;
->>>>>>> origin/master
+
+
+
 }
 
 .breaker2 {
@@ -533,7 +472,7 @@ a {
 }
 
 #content {
-<<<<<<< HEAD
+
     width: 70vw;
     margin-top: 160vh;
     display: block;
@@ -542,8 +481,7 @@ a {
 }
 
 #content_tekst {
-=======
->>>>>>> origin/master
+
     width: 70vw;
     margin-top: 60vh;
     display: block;
@@ -565,10 +503,7 @@ a {
 #img2 {
     height: 400px;
     width: 400px;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/master
 }
 
 #img3 {
@@ -585,30 +520,23 @@ a {
     padding: 10px;
 }
 
-<<<<<<< HEAD
-#splash {
-    width: 100%;
-    max-height: 90vh;
-    max-width: 1200px;
-=======
+
+
+
 .splash {
     width: 100vw;
     /*   max-height: 90vh;
     max-width: 1200px;*/
->>>>>>> origin/master
+
     top: 0;
     left: 0;
     Position: absolute;
     z-index: -99;
 }
 
-<<<<<<< HEAD
-splash_container {
-=======
 
 
 .splash_container {
->>>>>>> origin/master
     position: relative;
     width: 100vw;
 }
@@ -633,7 +561,7 @@ splash_container {
     }
 
     #instaBilleder {
-<<<<<<< HEAD
+
         width: 300px;
         height: 300px;
         padding: 1vw;
@@ -648,7 +576,8 @@ splash_container {
         margin-bottom: 30px;
         line-height: 25px;
     }
-/*
+
+    /*
 
     #content_tekst .underoverskrift {
         text-align: left;
@@ -692,73 +621,68 @@ splash_container {
     .btm_navbar a {
         font-size: 1rem;
     }
-=======
-        width: 250px;
-        height: 250px;
-        padding: 1vw;
 
-    }
+    =======width: 250px;
+    height: 250px;
+    padding: 1vw;
 
-    #content {
-        /*  margin-top: 80vh;
+}
+
+#content {
+    /*  margin-top: 80vh;
 */
-    }
+}
 
-    .colWrapper {
-        display: flex;
-        flex-direction: column;
-    }
+.colWrapper {
+    display: flex;
+    flex-direction: column;
+}
 
-    .galleri {
-        flex-direction: row;
-    }
+.galleri {
+    flex-direction: row;
+}
 
-    #img1 {
-        height: 605px;
-        width: 400px;
-    }
+#img1 {
+    height: 605px;
+    width: 400px;
+}
 
-    #img2 {
-        height: 300px;
-        width: 450px;
-        padding-top: 10px;
-    }
+#img2 {
+    height: 300px;
+    width: 450px;
+    padding-top: 10px;
+}
 
-    #img3 {
-        height: 300px;
-        width: 450px;
-    }
+#img3 {
+    height: 300px;
+    width: 450px;
+}
 
-    #img4 {
-        height: 605px;
-        width: 400px;
-    }
+#img4 {
+    height: 605px;
+    width: 400px;
+}
 
-    a {
-        font-size: 1.5rem;
-    }
+a {
+    font-size: 1.5rem;
+}
 
-    .btm_navbar a {
-        font-size: 1rem;
-    }
+.btm_navbar a {
+    font-size: 1rem;
+}
 
->>>>>>> origin/master
+> > > > > > > origin/master
 }
 
 /*----------Ipad--------*/
 
 @media only screen and (min-width:800px) {
 
-<<<<<<< HEAD
     /*----Generalet-----*/
     #menuknap {
         display: none;
     }
 
-    #menu {
-=======
-
-
 
 
 
@@ -768,22 +692,20 @@ splash_container {
 
     #menu {
 
->>>>>>> origin/master
         height: 6vh;
         width: 70vw;
         display: flex;
         flex-direction: row-reverse;
-<<<<<<< HEAD
-        background-color: white;
-        padding-right: 4vw;
-        position: static;
-=======
 
         background-color: white;
         padding-right: 4vw;
         position: static;
 
->>>>>>> origin/master
+        background-color: white;
+        padding-right: 4vw;
+        position: static;
+
+
     }
 }
 
@@ -857,4 +779,3 @@ splash_container {
             margin-top: 1vh;
             font-size: 2rem;
         }
-    }
