@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destination</title>
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&family=Raleway:wght@200;300&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box
+    }
+
+    body {
+      font-family: Verdana, sans-serif;
+      margin: 0
+    }
+
+    .mySlides {
+      display: none
+    }
+
+    img {
+      vertical-align: middle;
+    }
+
+    .slideshow-container img {
+      max-height: 800px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    /* Slideshow container */
+
+    .slideshow-container {
+      position: relative;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    /* Next & previous buttons */
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: black;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+      background: rgba(255, 255, 255, 0.9);
+    }
+
+    /* The dots/bullets/indicators */
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+
+    .active,
+    .dot:hover {
+      background-color: #717171;
+    }
+
+    /* Fading animation */
+    .fade {
+      -webkit-animation-name: fade;
+      -webkit-animation-duration: 1.5s;
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+
+    @-webkit-keyframes fade {
+      from {
+        opacity: .4
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    @keyframes fade {
+      from {
+        opacity: .4
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+
+      .prev,
+      .next,
+      .text {
+        font-size: 11px
+      }
+    }
+  </style>
+
+
+</head>
+
+<body>
+
+  <!-- NAV med udgangspunkt i denne fremgangsmåde: https://www.w3schools.com/howto/howto_css_dropdown.asp
+ Her er to navbars, som deler NAV'en op i to.-->
+  <nav>
+    <a class="forside-link" href="index.html">
+      <img id="logo">
+    </a>
+
+    <div class="top_navbar">
+
+      <a href="index.html">
+        <img id="language">
+      </a>
+
+
+      <a href="index.html">
+        <img id="user-login">
+      </a>
+
+    </div>
+
+    <div class="btm_navbar">
+
+
+
+
+
+
+      <div class="dropdown">
+        <button class="dropbtn">
+          <a href="kontakt.html">Kontakt</a>
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="08.01.00.html">Job i 21-5</a>
+          <a href="08.02.00.html">Kaffemøde</a>
+          <a href="08.03.00.html">Ofte stillede spørgsmål</a>
+          <a href="08.04.00.html">Orienteringsmøde</a>
+        </div>
+      </div>
+
+
+      <div class="dropdown">
+        <button class="dropbtn">
+          <a href="om_os.html">Om Os</a>
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="21-5teamet.html">21-5 Teamet</a>
+          <a href="07.02.00.html">Hvem er 21-5 for?</a>
+          <a href="21-5_familien.html">Det siger vores 21-5 familier</a>
+          <a href="07.04.00.html">Sådan benytter vi vores 21-5 boliger</a>
+          <a href="07.05.00.html">Lidt om 21-5 historien</a>
+          <a href="07.06.00.html">10 års fødselsdag</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button class="dropbtn">
+          <a href="oekonomi.html">Økonomi</a>
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="06.01.00.html">Skat</a>
+          <a href="06.02.00.html">Finansiering</a>
+          <a href="06.03.00.html">Investering</a>
+          <a href="06.04.00.html">Intet besvær og reelt ejerskab</a>
+          <a href="06.05.00.html">Administration hvad dækker fællesudgifterne</a>
+          <a href="06.06.00.html">Meget mere for pengene</a>
+          <a href="06.07.00.html">Hvor tjener 21-5 sine penge?</a>
+        </div>
+      </div>
+
+
+      <div class="dropdown">
+        <button class="dropbtn">
+          <a href="foreninger.html">Foreninger</a>
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="05.01.00.html">Se alle 21-5 stiftede foreninger</a>
+          <a href="ejerforeninger.html">Ejerforeninger</a>
+          <a href="05.03.00.html">Gensalg</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button class="dropbtn">
+          <a href="hvorfor21-5.html">Hvorfor 21-5?</a>
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="04.01.00.html">Hvordan sælger vi vores andel igen?</a>
+          <a href="04.02.00.html">Derfor købe en andel?</a>
+          <a href="04.03.00.html">Hvordan kommer vi med?</a>
+          <a href="04.04.00.html">I binder jer først endeligt når i har mødt de andre familier</a>
+          <a href="04.05.00.html">Fordi det giver mening</a>
+          <a href="04.06.00.html">Bookingsystemet fordeling af ugerne (fed knap)</a>
+          <a href="04.07.00.html">Skab nye familietraditioner</a>
+          <a href="04.08.00.html">Fællesskab i foreningerne</a>
+        </div>
+      </div>
+
+
+      <div class="dropdown">
+        <button class="dropbtn">
+          <a href="fraskrottilslot-oversigt.html">Fra Skrot til Slot</a>
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="udvaelgelse.html">Udvælgelse</a>
+          <a href="istandsaettelse.html">Istandsættelse</a>
+          <a href="indretning.html">Indretning</a>
+          <a href="klargoring.html">Klargøring</a>
+          <a href="vi-skaber-hjem.html">Vi skaber hjem</a>
+        </div>
+      </div>
+
+
+      <div class="dropdown">
+        <button class="dropbtn">
+          <a href="destinationer.html">Destinationer</a>
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="#">Mallorca</a>
+          <a href="#">Marbella</a>
+          <a href="#">Toscana</a>
+          <a href="#">Sydfrankrig</a>
+          <a href="#">Chamonix</a>
+          <a href="#">New York</a>
+          <a href="#">Barcelona</a>
+          <a href="#">Paris</a>
+          <a href="#">Rom</a>
+        </div>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- CONTENT -->
+  <div class="splash_container">
+
+    <img id="splash">
+
+
+  </div>
+
+  <main id="content">
+    <button id="go-back">Go back!</button>
+    <h1 class="overskrift"></h1>
+    <h2 class="firstunderoverskrift"></h2>
+    <p class="firstbeskrivelse"></p>
+    <img class="billede">
+    <h2 class="andenunderoverskrift"></h2>
+    <p class="andenbeskrivelse"></p>
+    <h2 class="tredjeunderoverskrift"></h2>
+    <p class="tredjebeskrivelse"></p>
+
+    <!--          KARUSEL CONTAINER           -->
+
+    <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <img src="" class="slide1">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="" class="slide2">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="" class="slide3">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="" class="slide4">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="" class="slide5">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="" class="slide6">
+      </div>
+
+
+      <div class="mySlides fade">
+        <img src="" class="slide7">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="" class="slide8">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="" class="slide9">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="" class="slide10">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="" class="slide11">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="" class="slide12">
+      </div>
+
+
+      <div class="mySlides fade">
+        <img src="" class="slide13">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="" class="slide14">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="" class="slide15">
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+    <br>
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
+      <span class="dot" onclick="currentSlide(6)"></span>
+      <span class="dot" onclick="currentSlide(7)"></span>
+      <span class="dot" onclick="currentSlide(8)"></span>
+      <span class="dot" onclick="currentSlide(9)"></span>
+      <span class="dot" onclick="currentSlide(10)"></span>
+      <span class="dot" onclick="currentSlide(11)"></span>
+      <span class="dot" onclick="currentSlide(12)"></span>
+      <span class="dot" onclick="currentSlide(13)"></span>
+      <span class="dot" onclick="currentSlide(14)"></span>
+      <span class="dot" onclick="currentSlide(15)"></span>
+    </div>
+
+
+
+  </main>
+
+  <!-- Footer CONTENT -->
+
+  <footer>
+    <div class="topFooter">
+
+      <div class="rowWrapper">
+        <div class="links">
+
+          <a href="#">Nyheder</a>
+          <a href="#">Presse</a>
+          <a href="#">Cookie- og privatpolitik</a>
+          <a href="#">Job</a>
+          <a href="#">Om os</a>
+          <a href="#">Ofte stillede spørgsmål</a>
+        </div>
+        <div class="Kontakt">
+          <p class="lilleOverskrift"></p>
+          <p class="email"></p>
+          <p class="tlf"></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="btmFooter">
+      <h3>Følg os på instagram</h3>
+      <div class="center">
+
+        <div class="rowWrapper">
+          <img id="instaBilleder" class="instaBillede1">
+          <img id="instaBilleder" class="instaBillede2">
+          <img id="instaBilleder" class="instaBillede3">
+          <img id="instaBilleder" class="instaBillede4">
+          <img id="instaBilleder" class="instaBillede5">
+        </div>
+      </div>
+    </div>
+
+    <div class="someFooter">
+      <div class="center">
+        <img id="facebook">
+        <img id="insta">
+      </div>
+    </div>
+
+
+  </footer>
+
+
+
+
+  <!-- JAVA -->
+
+  <script>
+    let destination
+    let permanentIndhold
+    let karusel
+
+    let url1 = "http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/destinationer/307";
+    let url2 = "http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/karrusel/781";
+    let url3 = "http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/karrusel/1821";
+
+    document.addEventListener("DOMContentLoaded", start)
+
+    async function start() {
+      let jsonData = await fetch(url1);
+      destination = await jsonData.json();
+      let response2 = await fetch(url2);
+      permanentIndhold = await response2.json();
+      let response3 = await fetch(url3);
+      billeder = await response3.json();
+
+      visTilbage();
+      visDestination();
+      visPermanentIndhold();
+      hentBilleder();
+    }
+
+    function visDestination() {
+      document.querySelector(".overskrift").textContent = destination.overskrift;
+      document.querySelector(".firstunderoverskrift").textContent = destination.firstunderoverskrift;
+      document.querySelector(".andenunderoverskrift").textContent = destination.andenunderoverskrift;
+      document.querySelector(".tredjeunderoverskrift").textContent = destination.tredjeunderoverskrift;
+
+
+      document.querySelector(".billede").src = destination.billede.guid;
+      document.querySelector("#splash").src = destination.splash.guid;
+
+      document.querySelector(".firstbeskrivelse").textContent = destination.firstbeskrivelse;
+      document.querySelector(".andenbeskrivelse").textContent = destination.andenbeskrivelse;
+      document.querySelector(".tredjebeskrivelse").textContent = destination.tredjebeskrivelse;
+    }
+
+    function visTilbage() {
+      document.getElementById('go-back').addEventListener('click', () => {
+        history.back();
+      });
+    }
+
+    function visPermanentIndhold() {
+      console.log("Permanent indhold hentes")
+      document.querySelector("#logo").src = permanentIndhold.billede1.guid;
+      document.querySelector("#language").src = permanentIndhold.billede4.guid;
+      document.querySelector("#user-login").src = permanentIndhold.billede3.guid;
+      document.querySelector("#facebook").src = permanentIndhold.billede5.guid;
+      document.querySelector("#insta").src = permanentIndhold.billede6.guid;
+      console.log("Instragram feed hentes")
+      document.querySelector(".instaBillede1").src = permanentIndhold.billede7.guid;
+      document.querySelector(".instaBillede2").src = permanentIndhold.billede8.guid;
+      document.querySelector(".instaBillede3").src = permanentIndhold.billede9.guid;
+      document.querySelector(".instaBillede4").src = permanentIndhold.billede10.guid;
+      document.querySelector(".instaBillede5").src = permanentIndhold.billede11.guid;
+    }
+
+
+    function hentBilleder() {
+      console.log(billeder)
+
+      document.querySelector(".slide1").src = billeder.billede1.guid;
+      document.querySelector(".slide2").src = billeder.billede2.guid;
+      document.querySelector(".slide3").src = billeder.billede3.guid;
+      document.querySelector(".slide4").src = billeder.billede4.guid;
+      document.querySelector(".slide5").src = billeder.billede5.guid;
+      document.querySelector(".slide6").src = billeder.billede6.guid;
+      document.querySelector(".slide7").src = billeder.billede7.guid;
+      document.querySelector(".slide8").src = billeder.billede8.guid;
+      document.querySelector(".slide9").src = billeder.billede9.guid;
+      document.querySelector(".slide10").src = billeder.billede10.guid;
+      document.querySelector(".slide11").src = billeder.billede11.guid;
+      document.querySelector(".slide12").src = billeder.billede12.guid;
+      document.querySelector(".slide13").src = billeder.billede13.guid;
+      document.querySelector(".slide14").src = billeder.billede14.guid;
+      document.querySelector(".slide15").src = billeder.billede15.guid;
+      showSlide();
+    }
+
+
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {
+        slideIndex = 1
+      }
+      if (n < 1) {
+        slideIndex = slides.length
+      }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+    }
+  </script>
+
+
+  <!-- HTML SLUT -->
+
+</body>
+
+</html>
