@@ -1,5 +1,9 @@
 *,
 body {
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
     text-decoration: none;
     padding: 0;
     margin: 0;
@@ -8,7 +12,12 @@ body {
 overflow: -moz-scrollbars-none;
 overflow-x: hidden;*/
     font-family: 'Raleway', sans-serif;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
 }
+
 
 .center {
     display: block;
@@ -31,6 +40,10 @@ overflow-x: hidden;*/
     width: 300px;
     height: 100px;
     background-color: white;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
     position: absolute;
     margin: auto;
     z-index: 988;
@@ -50,6 +63,7 @@ article img {
     z-index: 99;
 }
 */
+
 .tile {
     height: 330px;
     width: 350px;
@@ -58,6 +72,12 @@ article img {
     background-color: #EAEDEA;
     padding: 1vw;
     cursor: pointer;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/master
 }
 
 #tileContainer {
@@ -68,11 +88,17 @@ article img {
     top: 20vh;
     display: flex;
     flex-direction: column;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/master
 }
 
 #wrapper {
     position: absolute;
 }
+
 
 article {
     overflow: hidden;
@@ -82,6 +108,10 @@ article {
     /*    margin: 25px;*/
     background-color: white;
     /*    padding: 30px;*/
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
 }
 
 /* TEAM LOOPVIEW */
@@ -89,7 +119,12 @@ article {
     margin: 25px;
     background-color: white;
     padding: 30px;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
 }
+
 
 #liste {
     max-width: 1200px;
@@ -98,12 +133,19 @@ article {
     grid-gap: 30px;
     background-color: #fff;
     color: #444;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
 }
 
 .billede {
     padding-top: 5vw;
     width: 70%;
 }
+
+
+
 
 /* Skrot oversigt LOOPVIEW */
 #skrotOversigt {
@@ -112,6 +154,10 @@ article {
     margin: 25px;
     background-color: white;
     padding: 30px;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
 }
 
 .galleri {
@@ -126,9 +172,17 @@ article {
     flex-direction: row;
     margin: 0;
     padding: 0;
+<<<<<<< HEAD
 }
 
 .colWrapper {
+=======
+
+}
+
+.colWrapper {
+
+>>>>>>> origin/master
     margin: 0;
     padding: 0;
 }
@@ -142,12 +196,20 @@ article {
 .links {
     display: flex;
     flex-direction: column;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
 }
 
 .topFooter {
     margin-left: auto;
     margin-right: auto;
     width: 95vw;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
     -ms-overflow-style: none;
     overflow: -moz-scrollbars-none;
     overflow-x: hidden;
@@ -169,6 +231,10 @@ article {
     width: 200px;
     height: 200px;
     padding: 2vw;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
 }
 
 #facebook {
@@ -226,16 +292,28 @@ article {
 
 /* NAV elementer */
 .hidden {
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
     visibility: hidden;
 }
 
 #menuknap {
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
     display: inline-block;
     color: black;
     margin: 0.5rem;
     display: flex;
     flex-direction: column;
     float: right;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
 }
 
 #menu {
@@ -249,6 +327,10 @@ article {
     top: 12vh;
     left: 50vw;
     position: absolute;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
 }
 
 nav {
@@ -380,17 +462,41 @@ a {
 
 .catchphrase {
     position: absolute;
+<<<<<<< HEAD
     left: 50%;
     top: 34%;
     margin-left: -225px;
     font-size: 3rem;
+=======
+    margin-top: 10vw;
+    left: 35%;
+    top: 34%;
+
+    font-size: 3rem;
+}
+
+.header {
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    margin-left: -225px;
+    font-size: 5rem;
+    color: black
+>>>>>>> origin/master
 }
 
 .tekstblok1 {}
 
 .tekstblok2 {
+<<<<<<< HEAD
     column-gap: 40px;
     column-fill: balance;
+=======
+
+    column-gap: 40px;
+    column-fill: balance;
+
+>>>>>>> origin/master
 }
 
 #underoverskrift {
@@ -407,11 +513,19 @@ a {
     font-size: 2.2rem;
     bottom: 10%;
     left: 10%;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
 }
 
 /* Content elementer */
 .breaker {
+<<<<<<< HEAD
     height: 1000px;
+=======
+    height: 20vh;
+>>>>>>> origin/master
 }
 
 .breaker2 {
@@ -419,6 +533,7 @@ a {
 }
 
 #content {
+<<<<<<< HEAD
     width: 70vw;
     margin-top: 160vh;
     display: block;
@@ -427,8 +542,10 @@ a {
 }
 
 #content_tekst {
+=======
+>>>>>>> origin/master
     width: 70vw;
-    margin-top: 10vh;
+    margin-top: 60vh;
     display: block;
     text-align: center;
     margin-left: auto;
@@ -448,6 +565,10 @@ a {
 #img2 {
     height: 400px;
     width: 400px;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
 }
 
 #img3 {
@@ -464,17 +585,30 @@ a {
     padding: 10px;
 }
 
+<<<<<<< HEAD
 #splash {
     width: 100%;
     max-height: 90vh;
     max-width: 1200px;
+=======
+.splash {
+    width: 100vw;
+    /*   max-height: 90vh;
+    max-width: 1200px;*/
+>>>>>>> origin/master
     top: 0;
     left: 0;
     Position: absolute;
     z-index: -99;
 }
 
+<<<<<<< HEAD
 splash_container {
+=======
+
+
+.splash_container {
+>>>>>>> origin/master
     position: relative;
     width: 100vw;
 }
@@ -484,6 +618,8 @@ splash_container {
     position: absolute;
     top: 50vw;
 }
+
+
 
 @media screen and (min-width: 600px) {
     .tekstblok2 {
@@ -497,6 +633,7 @@ splash_container {
     }
 
     #instaBilleder {
+<<<<<<< HEAD
         width: 300px;
         height: 300px;
         padding: 1vw;
@@ -555,26 +692,169 @@ splash_container {
     .btm_navbar a {
         font-size: 1rem;
     }
+=======
+        width: 250px;
+        height: 250px;
+        padding: 1vw;
+
+    }
+
+    #content {
+        /*  margin-top: 80vh;
+*/
+    }
+
+    .colWrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .galleri {
+        flex-direction: row;
+    }
+
+    #img1 {
+        height: 605px;
+        width: 400px;
+    }
+
+    #img2 {
+        height: 300px;
+        width: 450px;
+        padding-top: 10px;
+    }
+
+    #img3 {
+        height: 300px;
+        width: 450px;
+    }
+
+    #img4 {
+        height: 605px;
+        width: 400px;
+    }
+
+    a {
+        font-size: 1.5rem;
+    }
+
+    .btm_navbar a {
+        font-size: 1rem;
+    }
+
+>>>>>>> origin/master
 }
+
+/*----------Ipad--------*/
 
 @media only screen and (min-width:800px) {
 
+<<<<<<< HEAD
     /*----Generalet-----*/
     #menuknap {
         display: none;
     }
 
     #menu {
+=======
+
+
+
+
+
+    #menuknap {
+        display: none;
+    }
+
+    #menu {
+
+>>>>>>> origin/master
         height: 6vh;
         width: 70vw;
         display: flex;
         flex-direction: row-reverse;
+<<<<<<< HEAD
         background-color: white;
         padding-right: 4vw;
         position: static;
+=======
+
+        background-color: white;
+        padding-right: 4vw;
+        position: static;
+
+>>>>>>> origin/master
     }
 }
+
+
+
+
 
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
+/*----------- L desktop -1600x900-------------*/
+@media only screen and (min-width:1600px) {
+    #content {
+        margin-top: 100vh;
+
+    }
+}
+
+/*----------- NORMAL desktop -1920x1080-------------*/
+@media only screen and (min-width:1800px) {
+
+    #tileContainer {
+        margin-left: 20vw;
+    }
+
+    .catchphrase {
+        margin-left: 2vw;
+    }
+
+    /*----------- 4K desktop -2560x1641-------------*/
+
+    @media only screen and (min-width:2000px) {
+
+        #tileContainer {
+
+            margin: 10vh 0 0 28vw;
+
+        }
+
+        .catchphrase {
+            margin-left: 5vw;
+            font-size: 4rem;
+
+        }
+
+        #content {
+            margin-top: 100vh;
+
+        }
+
+        .galleri {
+            margin-left: 10vw;
+        }
+
+        .tile {
+            height: 480px;
+            width: 550px;
+        }
+
+        .figur {
+            margin-top: 5vh;
+        }
+
+        .tekst {
+            font-size: 1.5rem;
+            margin-top: 1vh;
+        }
+
+        .pris {
+            margin-top: 1vh;
+            font-size: 2rem;
+        }
+    }
