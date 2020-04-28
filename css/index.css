@@ -544,7 +544,8 @@ a {
 /****KONTAKT****/
 #tekst_container {
     position: absolute;
-    top: 50vw;
+    text-align: 20px;
+
 }
 
 
@@ -568,7 +569,14 @@ a {
     }
 
     #content {
-        margin-top: 80vh;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    #content_liste {
+        position: absolute;
+        margin-top: 70vw;
+        padding: 40px;
     }
 
     #content_tekst {

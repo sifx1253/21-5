@@ -162,7 +162,7 @@
     <h1 class="header">Destinationer</h1>
 
 
-    <main id="content">
+    <main id="content_liste">
         <main id="liste"></main>
     </main>
 
@@ -243,19 +243,19 @@
         // CTRL+F/Søg i vieweren efter pagens slug, så finder du den hurtigt
         let url1 = "http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/destinationer";
         let url2 = "http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/media/1620";
-        let url3 = "http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/karrusel/781";
+
 
         // HER TILSKRIVES OVENSTÅENDE VARIIABLE OG DENS FUNKTION SKAL STARTES
         async function start() {
             let response1 = await fetch(url1);
             let response2 = await fetch(url2);
-            let response3 = await fetch(url3);
+
             destinationer = await response1.json();
             splash = await response2.json();
-            permanentIndhold = await response3.json();
+            //            permanentIndhold = await response3.json();
             visDestinationer();
             visSplash();
-            visPermanentIndhold();
+            //            visPermanentIndhold();
         }
 
         // FUNKTION HENTER DATA - HENVISER TIL ID, CLASS ELLER TAG I HTML'EN - TAG HØJDE FOR TEXTCONTENT, INNERHTML, SRC OSV.
@@ -294,20 +294,20 @@
 
 
 
-        function visPermanentIndhold() {
-            console.log("Permanent indhold hentes")
-            document.querySelector("#logo").src = permanentIndhold.billede1.guid;
-            document.querySelector("#language").src = permanentIndhold.billede4.guid;
-            document.querySelector("#user-login").src = permanentIndhold.billede3.guid;
-            document.querySelector("#facebook").src = permanentIndhold.billede5.guid;
-            document.querySelector("#insta").src = permanentIndhold.billede6.guid;
-            console.log("Instragram feed hentes")
-            document.querySelector(".instaBillede1").src = permanentIndhold.billede7.guid;
-            document.querySelector(".instaBillede2").src = permanentIndhold.billede8.guid;
-            document.querySelector(".instaBillede3").src = permanentIndhold.billede9.guid;
-            document.querySelector(".instaBillede4").src = permanentIndhold.billede10.guid;
-            document.querySelector(".instaBillede5").src = permanentIndhold.billede11.guid;
-        }
+        //        function visPermanentIndhold() {
+        //            console.log("Permanent indhold hentes")
+        //            document.querySelector("#logo").src = permanentIndhold.billede1.guid;
+        //            document.querySelector("#language").src = permanentIndhold.billede4.guid;
+        //            document.querySelector("#user-login").src = permanentIndhold.billede3.guid;
+        //            document.querySelector("#facebook").src = permanentIndhold.billede5.guid;
+        //            document.querySelector("#insta").src = permanentIndhold.billede6.guid;
+        //            console.log("Instragram feed hentes")
+        //            document.querySelector(".instaBillede1").src = permanentIndhold.billede7.guid;
+        //            document.querySelector(".instaBillede2").src = permanentIndhold.billede8.guid;
+        //            document.querySelector(".instaBillede3").src = permanentIndhold.billede9.guid;
+        //            document.querySelector(".instaBillede4").src = permanentIndhold.billede10.guid;
+        //            document.querySelector(".instaBillede5").src = permanentIndhold.billede11.guid;
+        //        }
 
     </script>
 
