@@ -458,6 +458,15 @@ a {
     margin-right: auto;
 }
 
+#content_tekst {
+    width: 70vw;
+    margin-top: 10vh;
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .galleri {
     margin-left: 25px;
     margin-right: auto;
