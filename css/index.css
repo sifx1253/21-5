@@ -523,7 +523,7 @@ a {
 
 
 
-#splash {
+.splash {
     width: 100vw;
     /*   max-height: 90vh;
     max-width: 1200px;*/
@@ -779,4 +779,3 @@ a {
             margin-top: 1vh;
             font-size: 2rem;
         }
-    }
