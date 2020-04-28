@@ -200,26 +200,22 @@
     </nav>
 
     <!-- CONTENT -->
-
-    <main id="liste"></main>
-
-    <template>
-        <article>
-            <h1 class="overskrift"></h1>
-            <img class="billede">
-        </article>
-    </template>
-    <!-- CONTENT -->
     <div class="splash_container">
 
         <img id="splash" src="" alt="">
 
     </div>
+    <h1 class="header">Økonomi</h1>
+    <div id="content">
+        <main id="liste"></main>
 
-    <main id="tekst_container">
-        <h1 id="overskrift"></h1>
-        <p id="brødtekst"></p>
-    </main>
+        <template>
+            <article>
+                <h1 class="overskrift"></h1>
+                <img class="billede">
+            </article>
+        </template>
+    </div>
 
     <!-- Footer CONTENT -->
     <div class="breaker2">
@@ -279,6 +275,7 @@
         // Samme som før
         let pages
         let permanentIndhold
+        let splash
 
 
         // Loopview'et henter title og splash billede fra de pages, vi har lavet.1. Lav en kategori i WordpressPages -> Categories -> Add New
@@ -299,6 +296,7 @@
 
         let url1 = "http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/pages?categories=5";
         let url2 = "http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/karrusel/781";
+        let url3 = "http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/media/1620";
 
 
 
@@ -306,10 +304,13 @@
         async function start() {
             let response1 = await fetch(url1);
             let response2 = await fetch(url2);
+            let response3 = await fetch(url3);
             pages = await response1.json();
             permanentIndhold = await response2.json();
+            splash = await response3.json();
             visPages();
             visPermanentIndhold();
+            visSplash();
         }
 
 
@@ -326,6 +327,7 @@
                 // Samme som før - Henvis til de elementer som skal hentes.
                 clone.querySelector(".overskrift").textContent = page.title.rendered;
 
+
                 console.log("Kategori og slug hentes ned")
                 console.log(page, page.slug)
 
@@ -338,6 +340,12 @@
                 liste.appendChild(clone);
             });
             console.log("Husk nu at rette HTMLen!")
+        }
+
+        function visSplash() {
+            console.log("splash loades")
+            document.querySelector("#splash").src = splash.guid.rendered;
+
         }
 
 
