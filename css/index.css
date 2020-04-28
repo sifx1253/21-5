@@ -740,13 +740,18 @@ padding: 1vw;
     /*----------- L desktop -1600x900-------------*/
     @media only screen and (min-width:1600px) {
         #content {
-            margin-top: 100vh;
+            margin-top: 60vh;
 
         }
 
         .catchphrase {
             margin-left: 2vw;
         }
+
+        .galleri {
+            margin-left: -1vw;
+        }
+
     }
 
     /*----------- NORMAL desktop -1920x1080-------------*/
@@ -760,46 +765,49 @@ padding: 1vw;
             margin-left: 2vw;
         }
 
-        /*----------- 4K desktop -2560x1641-------------*/
 
-        @media only screen and (min-width:2000px) {
+    }
 
-            #tileContainer {
+    /*----------- 4K desktop -2560x1641-------------*/
 
-                margin: 10vh 0 0 28vw;
+    @media only screen and (min-width:2000px) {
 
-            }
+        #tileContainer {
 
-            .catchphrase {
-                margin-left: 5vw;
-                font-size: 4rem;
+            margin: 5vh 0 0 28vw;
 
-            }
+        }
 
-            #content {
-                margin-top: 100vh;
+        .catchphrase {
+            margin-left: 5vw;
+            font-size: 4rem;
 
-            }
+        }
 
-            .galleri {
-                margin-left: 10vw;
-            }
+        #content {
+            margin-top: 70vh;
 
-            .tile {
-                height: 480px;
-                width: 550px;
-            }
+        }
 
-            .figur {
-                margin-top: 5vh;
-            }
+        .galleri {
+            margin-left: 10vw;
+        }
 
-            .tekst {
-                font-size: 1.5rem;
-                margin-top: 1vh;
-            }
+        .tile {
+            height: 480px;
+            width: 550px;
+        }
 
-            .pris {
-                margin-top: 1vh;
-                font-size: 2rem;
-            }
+        .figur {
+            margin-top: 5vh;
+        }
+
+        .tekst {
+            font-size: 1.5rem;
+            margin-top: 1vh;
+        }
+
+        .pris {
+            margin-top: 1vh;
+            font-size: 2rem;
+        }
