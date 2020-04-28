@@ -40,6 +40,7 @@
             height: auto;
             margin: auto;
         }
+
     </style>
 </head>
 
@@ -200,15 +201,22 @@
     </nav>
 
     <!-- CONTENT -->
+    <div class="splash_container">
 
-    <main id="liste"></main>
+        <img id="splash" src="" alt="">
 
-    <template>
-        <article>
-            <h1 class="overskrift"></h1>
-            <img class="billede">
-        </article>
-    </template>
+    </div>
+    <h1 class="header">Kontakt</h1>
+    <div id="content">
+        <main id="liste"></main>
+
+        <template>
+            <article>
+                <h1 class="overskrift lwOverskrift "></h1>
+                <img class="billede">
+            </article>
+        </template>
+    </div>
     <!-- Footer CONTENT -->
     <div class="breaker2">
 
@@ -267,6 +275,7 @@
         // Samme som før
         let pages
         let permanentIndhold
+        let splash
 
 
         // Loopview'et henter title og splash billede fra de pages, vi har lavet.1. Lav en kategori i WordpressPages -> Categories -> Add New
@@ -287,6 +296,7 @@
 
         let url1 = "http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/pages?categories=7";
         let url2 = "http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/karrusel/781";
+        let url3 = "http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/media/1620";
 
 
 
@@ -294,8 +304,11 @@
         async function start() {
             let response1 = await fetch(url1);
             let response2 = await fetch(url2);
+            let response3 = await fetch(url3);
             pages = await response1.json();
             permanentIndhold = await response2.json();
+            splash = await response3.json();
+            visSplash();
             visPages();
             visPermanentIndhold();
         }
@@ -329,6 +342,11 @@
             console.log("Husk nu at rette HTMLen!")
         }
 
+        function visSplash() {
+            console.log("splash loades")
+            document.querySelector("#splash").src = splash.guid.rendered;
+
+        }
 
 
         // Permanent indhold hentes i Footer funktionenen
@@ -347,9 +365,12 @@
             document.querySelector(".instaBillede4").src = permanentIndhold.billede10.guid;
             document.querySelector(".instaBillede5").src = permanentIndhold.billede11.guid;
         }
+
     </script>
 
 
     <!-- HTML SLUT -->
 
-</body></html>
+</body>
+
+</html>
