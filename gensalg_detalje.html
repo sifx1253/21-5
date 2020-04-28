@@ -242,8 +242,10 @@
         let id = urlParams.get("id");
         let destination;
         let permanentIndhold;
+        let splash
 
         let url2 = "http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/karrusel/781";
+        let url3 = "http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/media/1620";
 
         document.addEventListener("DOMContentLoaded", start)
 
@@ -251,11 +253,14 @@
             let jsonData = await fetch(`http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/gensalg/${id}`);
             destination = await jsonData.json();
             let response2 = await fetch(url2);
+            let response3 = await fetch(url3);
             permanentIndhold = await response2.json();
+            splash = await response3.json();
+            visSplash();
 
             visDestination();
             visTilbage();
-
+            visSplash();
             visPermanentIndhold();
         }
 
@@ -279,9 +284,11 @@
             document.querySelector(".tredjeteskfremhvelse").textContent = destination.tredjetekst;
 
 
+        }
 
-
-
+        function visSplash() {
+            console.log("splash loades")
+            document.querySelector("#splash").src = splash.guid.rendered;
 
         }
 
