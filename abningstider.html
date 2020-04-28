@@ -233,23 +233,24 @@
 
         // LAV EN VARIABLE TIL AT BEGYNDE MED
         let job
-        let logo
         let permanentIndhold
 
         // SKRIV JSON URL IND HER OG FORBIND MED VARIABEL
         //Find ID her: http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/posts?per_page=100
         // CTRL+F/Søg i vieweren efter pagens slug, så finder du den hurtigt
         let url1 = "http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/pages/1615";
-        let url2 = "http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/media/220";
+        let url2 = "http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/karrusel/781";
 
         // HER TILSKRIVES OVENSTÅENDE VARIIABLE OG DENS FUNKTION SKAL STARTES
         async function start() {
             let response1 = await fetch(url1);
             let response2 = await fetch(url2);
+
             job = await response1.json();
-            logo = await response2.json();
+            permanentIndhold = await response2.json();
+
             visjob();
-            visLogo();
+
             visPermanentIndhold();
         }
 
@@ -263,16 +264,11 @@
 
         }
 
-        function visLogo() {
-            console.log("billeder loades")
-            document.querySelector("#logo").src = logo.source_url;
 
-        }
 
         function visPermanentIndhold() {
             console.log("Permanent indhold hentes")
             document.querySelector("#logo").src = permanentIndhold.billede1.guid;
-            document.querySelector("#pil").src = permanentIndhold.billede2.guid;
             document.querySelector("#language").src = permanentIndhold.billede4.guid;
             document.querySelector("#user-login").src = permanentIndhold.billede3.guid;
             document.querySelector("#facebook").src = permanentIndhold.billede5.guid;

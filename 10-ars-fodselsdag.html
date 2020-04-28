@@ -18,18 +18,18 @@
  Her er to navbars, som deler NAV'en op i to.-->
     <nav>
         <a class="forside-link" href="index.html">
-            <img id="logo" src="logo" alt="">
+            <img id="logo">
         </a>
 
         <div class="top_navbar">
 
             <a href="index.html">
-                <img id="language" src="language" alt="">
+                <img id="language">
             </a>
 
 
             <a href="index.html">
-                <img id="user-login" src="user-login" alt="">
+                <img id="user-login">
             </a>
 
         </div>
@@ -237,24 +237,21 @@
 
         // LAV EN VARIABLE TIL AT BEGYNDE MED
         let tiAar
-        let logo
         let permanentIndhold
 
         // SKRIV JSON URL IND HER OG FORBIND MED VARIABEL
         //Find ID her: http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/posts?per_page=100
         // CTRL+F/Søg i vieweren efter pagens slug, så finder du den hurtigt
         let url1 = "http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/pages/286";
-        let url2 = "http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/media/220";
+        let url2 = "http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/karrusel/781";
 
         // HER TILSKRIVES OVENSTÅENDE VARIIABLE OG DENS FUNKTION SKAL STARTES
         async function start() {
             let response1 = await fetch(url1);
             let response2 = await fetch(url2);
-
             tiAar = await response1.json();
             permanentIndhold = await response2.json();
             vistiAar();
-            visLogo();
             visPermanentIndhold();
         }
 
@@ -271,7 +268,6 @@
         function visPermanentIndhold() {
             console.log("Permanent indhold hentes")
             document.querySelector("#logo").src = permanentIndhold.billede1.guid;
-            document.querySelector("#pil").src = permanentIndhold.billede2.guid;
             document.querySelector("#language").src = permanentIndhold.billede4.guid;
             document.querySelector("#user-login").src = permanentIndhold.billede3.guid;
             document.querySelector("#facebook").src = permanentIndhold.billede5.guid;
@@ -283,12 +279,9 @@
             document.querySelector(".instaBillede4").src = permanentIndhold.billede10.guid;
             document.querySelector(".instaBillede5").src = permanentIndhold.billede11.guid;
         }
-
     </script>
 
 
     <!-- HTML SLUT -->
 
-</body>
-
-</html>
+</body></html>
