@@ -169,6 +169,57 @@
         </article>
     </template>
 
+
+    <!-- Footer CONTENT -->
+    <div class="breaker2">
+
+    </div>
+    <footer>
+
+        <div class="topFooter">
+
+            <div class="rowWrapper">
+                <div class="links">
+
+                    <a href="#">Nyheder</a>
+                    <a href="#">Presse</a>
+                    <a href="#">Cookie- og privatpolitik</a>
+                    <a href="#">Job</a>
+                    <a href="#">Om os</a>
+                    <a href="#">Ofte stillede spørgsmål</a>
+                </div>
+                <div class="Kontakt">
+                    <p class="lilleOverskrift"></p>
+                    <p class="email"></p>
+                    <p class="tlf"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="btmFooter">
+            <h3>Følg os på instagram</h3>
+            <div class="center">
+
+                <div class="rowWrapper">
+                    <img id="instaBilleder" class="instaBillede1">
+                    <img id="instaBilleder" class="instaBillede2">
+                    <img id="instaBilleder" class="instaBillede3">
+                    <img id="instaBilleder" class="instaBillede4">
+                    <img id="instaBilleder" class="instaBillede5">
+                </div>
+            </div>
+        </div>
+
+        <div class="someFooter">
+            <div class="center">
+                <img id="facebook">
+                <img id="insta">
+            </div>
+        </div>
+
+
+    </footer>
+
     <!-- JAVA -->
 
     <script>
@@ -177,22 +228,22 @@
 
         // LAV EN VARIABLE TIL AT BEGYNDE MED
         let destinationer
-        let logo
+        let permanentIndhold
 
         // SKRIV JSON URL IND HER OG FORBIND MED VARIABEL
         //Find ID her: http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/posts?per_page=100
         // CTRL+F/Søg i vieweren efter pagens slug, så finder du den hurtigt
         let url1 = "http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/gensalg";
-        let url2 = "http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/media/220";
+        let url2 = "http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/karrusel/781";
 
         // HER TILSKRIVES OVENSTÅENDE VARIIABLE OG DENS FUNKTION SKAL STARTES
         async function start() {
             let response1 = await fetch(url1);
             let response2 = await fetch(url2);
             destinationer = await response1.json();
-            logo = await response2.json();
+            permanentIndhold = await response2.json();
             visDestinationer();
-            visSplash();
+            visPermanentIndhold();
 
         }
 
@@ -225,10 +276,19 @@
         }
 
 
-        function visSplash() {
-            console.log("splash loades")
-            document.querySelector(".splash").src = splash.guid.rendered;
-
+        function visPermanentIndhold() {
+            console.log("Permanent indhold hentes")
+            document.querySelector("#logo").src = permanentIndhold.billede1.guid;
+            document.querySelector("#language").src = permanentIndhold.billede4.guid;
+            document.querySelector("#user-login").src = permanentIndhold.billede3.guid;
+            document.querySelector("#facebook").src = permanentIndhold.billede5.guid;
+            document.querySelector("#insta").src = permanentIndhold.billede6.guid;
+            console.log("Instragram feed hentes")
+            document.querySelector(".instaBillede1").src = permanentIndhold.billede7.guid;
+            document.querySelector(".instaBillede2").src = permanentIndhold.billede8.guid;
+            document.querySelector(".instaBillede3").src = permanentIndhold.billede9.guid;
+            document.querySelector(".instaBillede4").src = permanentIndhold.billede10.guid;
+            document.querySelector(".instaBillede5").src = permanentIndhold.billede11.guid;
         }
 
     </script>

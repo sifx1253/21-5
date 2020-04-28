@@ -185,7 +185,12 @@
     </main>
     <!-- Footer CONTENT -->
 
+    <!-- Footer CONTENT -->
+    <div class="breaker2">
+
+    </div>
     <footer>
+
         <div class="topFooter">
 
             <div class="rowWrapper">
@@ -232,21 +237,25 @@
 
 
 
-
     <!-- JAVA -->
 
     <script>
         let urlParams = new URLSearchParams(window.location.search);
         let id = urlParams.get("id");
         let destination;
+        let permanentIndhold
         document.addEventListener("DOMContentLoaded", start)
+        let url2 = "http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/karrusel/781";
 
         async function start() {
             let jsonData = await fetch(`http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/allestiftede/${id}`);
             destination = await jsonData.json();
+            let response2 = await fetch(url2);
+            permanentIndhold = await response2.json();
 
             visTilbage();
             visDestination();
+            visPermanentIndhold();
         }
 
         function visDestination() {
@@ -267,13 +276,7 @@
             document.querySelector(".femteunderoverskrift").textContent = destination.femteunderoverskrift;
 
 
-
-
-
-
-
         }
-
 
 
         function visTilbage() {
@@ -281,9 +284,28 @@
                 history.back();
             });
         }
+
+
+        function visPermanentIndhold() {
+            console.log("Permanent indhold hentes")
+            document.querySelector("#logo").src = permanentIndhold.billede1.guid;
+            document.querySelector("#language").src = permanentIndhold.billede4.guid;
+            document.querySelector("#user-login").src = permanentIndhold.billede3.guid;
+            document.querySelector("#facebook").src = permanentIndhold.billede5.guid;
+            document.querySelector("#insta").src = permanentIndhold.billede6.guid;
+            console.log("Instragram feed hentes")
+            document.querySelector(".instaBillede1").src = permanentIndhold.billede7.guid;
+            document.querySelector(".instaBillede2").src = permanentIndhold.billede8.guid;
+            document.querySelector(".instaBillede3").src = permanentIndhold.billede9.guid;
+            document.querySelector(".instaBillede4").src = permanentIndhold.billede10.guid;
+            document.querySelector(".instaBillede5").src = permanentIndhold.billede11.guid;
+        }
+
     </script>
 
 
     <!-- HTML SLUT -->
 
-</body></html>
+</body>
+
+</html>
