@@ -156,7 +156,7 @@
   <!-- CONTENT -->
   <div class="splash_container">
 
-    <img class="splash" src="" alt="">
+    <img id="splash" src="" alt="">
 
   </div>
 
@@ -247,7 +247,7 @@
     function visIstand() {
       console.log("Page data loades")
       document.querySelector("#brødtekst").innerHTML = istand.content.rendered;
-      document.querySelector(".splash").src = istand.better_featured_image.source_url;
+      document.querySelector("#splash").src = istand.better_featured_image.source_url;
 
     }
 

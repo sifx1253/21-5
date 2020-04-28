@@ -156,7 +156,7 @@
   <!-- CONTENT -->
   <div class="splash_container">
 
-    <img class="splash" src="" alt="">
+    <img id="splash" src="" alt="">
 
   </div>
 
@@ -242,7 +242,7 @@
     function visUdvælg() {
       console.log("Page data loades")
       document.querySelector("#brødtekst").innerHTML = udvælg.content.rendered;
-      document.querySelector(".splash").src = udvælg.better_featured_image.source_url;
+      document.querySelector("#splash").src = udvælg.better_featured_image.source_url;
 
     }
 
