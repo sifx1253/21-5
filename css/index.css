@@ -525,6 +525,21 @@ a {
 
 .splash {
     width: 100vw;
+    object-fit: cover;
+    height: 70vh;
+    /*   max-height: 90vh;
+    max-width: 1200px;*/
+
+    top: 0;
+    left: 0;
+    Position: absolute;
+    z-index: -99;
+}
+
+#splash {
+    width: 100vw;
+    object-fit: cover;
+    height: 70vh;
     /*   max-height: 90vh;
     max-width: 1200px;*/
 
@@ -539,6 +554,8 @@ a {
 .splash_container {
     position: relative;
     width: 100vw;
+
+
 }
 
 /****KONTAKT****/
@@ -684,7 +701,7 @@ padding: 1vw;
 
     @media only screen and (min-width:800px) {
 
-        ----Generalet----- #menuknap {
+        #menuknap {
             display: none;
         }
 
@@ -725,6 +742,10 @@ padding: 1vw;
         #content {
             margin-top: 100vh;
 
+        }
+
+        .catchphrase {
+            margin-left: 2vw;
         }
     }
 
