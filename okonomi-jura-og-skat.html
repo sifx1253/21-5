@@ -173,17 +173,18 @@
         <img id="splash" src="" alt="">
 
     </div>
+    <h1 class="header">Økonomi, jura og skat</h1>
 
-    <div class="content_container">
-        <h3 id="underoverskrift"></h3>
+    <div id="content">
 
+        <main>
+            <h3 id="underoverskrift"></h3>
+
+            <h1 id="overskrift"></h1>
+            <p id="brødtekst"></p>
+        </main>
     </div>
-    <main id="tekst_container">
-
-        <h1 id="overskrift"></h1>
-        <p id="brødtekst"></p>
-    </main>
-    <!-- CONTENT -->
+    <!--     CONTENT
     <div class="splash_container">
 
         <img id="splash" src="" alt="">
@@ -193,7 +194,7 @@
     <main id="tekst_container">
         <h1 id="overskrift"></h1>
         <p id="brødtekst"></p>
-    </main>
+    </main>-->
 
     <!-- Footer CONTENT -->
     <div class="breaker2">
@@ -254,17 +255,22 @@
         // LAV EN VARIABLE TIL AT BEGYNDE MED
         let oekonomi
         let permanentIndhold
+        let splash
 
         // SKRIV JSON URL IND HER OG FORBIND MED VARIABLE
         let url1 = "http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/pages/16";
         let url2 = "http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/karrusel/781";
+        let url3 = "http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/media/1620";
 
         // HER TILSKRIVES OVENSTÅENDE VARIIABLE OG DENS FUNKTION SKAL STARTES
         async function start() {
             let response1 = await fetch(url1);
             let response2 = await fetch(url2);
+            let response3 = await fetch(url3);
             oekonomi = await response1.json();
             permanentIndhold = await response2.json();
+            splash = await response3.json();
+            visSplash();
             visoekonomi();
             visPermanentIndhold();
         }
@@ -276,6 +282,12 @@
             console.log("Page data loades")
             document.querySelector("#overskrift").textContent = oekonomi.title.rendered;
             document.querySelector("#brødtekst").innerHTML = oekonomi.content.rendered;
+
+        }
+
+        function visSplash() {
+            console.log("splash loades")
+            document.querySelector("#splash").src = splash.guid.rendered;
 
         }
 
@@ -293,9 +305,12 @@
             document.querySelector(".instaBillede4").src = permanentIndhold.billede10.guid;
             document.querySelector(".instaBillede5").src = permanentIndhold.billede11.guid;
         }
+
     </script>
 
 
     <!-- HTML SLUT -->
 
-</body></html>
+</body>
+
+</html>

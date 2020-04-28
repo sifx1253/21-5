@@ -158,18 +158,20 @@
         <img id="splash">
 
     </div>
+    <h1 class="header">Se alle stiftede 21-5 foreninger</h1>
+    <div id="content">
+        <main id="liste"></main>
 
-    <main id="liste"></main>
+        <template>
+            <article>
+                <h1 class="overskrift"></h1>
+                <p class="firsttekst"></p>
+                <img class="billede">
+            </article>
+        </template>
+    </div>
 
-    <template>
-        <article>
-            <h1 class="overskrift"></h1>
-            <p class="firsttekst"></p>
-            <img class="billede">
-        </article>
-    </template>
-
-    <!-- CONTENT -->
+    <!-- CONTENT
     <div class="splash_container">
 
         <img id="splash" src="" alt="">
@@ -179,7 +181,7 @@
     <main id="tekst_container">
         <h1 id="overskrift"></h1>
         <p id="brødtekst"></p>
-    </main>
+    </main>-->
 
     <!-- Footer CONTENT -->
     <div class="breaker2">
@@ -240,19 +242,25 @@
         // LAV EN VARIABLE TIL AT BEGYNDE MED
         let destinationer
         let permanentIndhold
+        let splash
 
         // SKRIV JSON URL IND HER OG FORBIND MED VARIABEL
         //Find ID her: http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/posts?per_page=100
         // CTRL+F/Søg i vieweren efter pagens slug, så finder du den hurtigt
         let url1 = "http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/allestiftede";
         let url2 = "http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/karrusel/781";
+        let url3 = "http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/media/1620";
+
 
         // HER TILSKRIVES OVENSTÅENDE VARIIABLE OG DENS FUNKTION SKAL STARTES
         async function start() {
             let response1 = await fetch(url1);
             let response2 = await fetch(url2);
+            let response3 = await fetch(url3);
             destinationer = await response1.json();
             permanentIndhold = await response2.json();
+            splash = await response3.json();
+            visSplash();
             visPermanentIndhold();
             visDestinationer();
 
@@ -289,6 +297,13 @@
 
 
 
+        function visSplash() {
+            console.log("splash loades")
+            document.querySelector("#splash").src = splash.guid.rendered;
+
+        }
+
+
         function visPermanentIndhold() {
             console.log("Permanent indhold hentes")
             document.querySelector("#logo").src = permanentIndhold.billede1.guid;
@@ -303,10 +318,12 @@
             document.querySelector(".instaBillede4").src = permanentIndhold.billede10.guid;
             document.querySelector(".instaBillede5").src = permanentIndhold.billede11.guid;
         }
+
     </script>
 
 
     <!-- HTML SLUT -->
 
-</body></html>
+</body>
 
+</html>

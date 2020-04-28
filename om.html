@@ -40,6 +40,7 @@
             height: auto;
             margin: auto;
         }
+
     </style>
 </head>
 
@@ -183,30 +184,38 @@
     </nav>
 
     <!-- CONTENT -->
+    <div class="splash_container">
 
-    <main id="liste">
+        <img id="splash" src="" alt="">
 
-    </main>
-    <section id="team">
+    </div>
+    <h1 class="header">Om 21-5</h1>
+    <div id="content">
+
+        <main id="liste">
+
+        </main>
+        <section id="team">
 
 
 
-    </section>
-    <template id="ansat_temp">
-        <article>
-            <h1 class="navn"></h1>
-            <img class="ansat_billede">
-            <p class="titel"></p>
-        </article>
-    </template>
+        </section>
+        <template id="ansat_temp">
+            <article>
+                <h1 class="navn"></h1>
+                <img class="ansat_billede">
+                <p class="titel"></p>
+            </article>
+        </template>
 
-    <template id="page_temp">
-        <article>
-            <h1 class="overskrift"></h1>
-            <img class="billede">
-        </article>
-    </template>
-    <!-- CONTENT -->
+        <template id="page_temp">
+            <article>
+                <h1 class="overskrift"></h1>
+                <img class="billede">
+            </article>
+        </template>
+    </div>
+    <!--   CONTENT
     <div class="splash_container">
 
         <img id="splash" src="" alt="">
@@ -216,7 +225,7 @@
     <main id="tekst_container">
         <h1 id="overskrift"></h1>
         <p id="brødtekst"></p>
-    </main>
+    </main>-->
 
     <!-- Footer CONTENT -->
     <div class="breaker2">
@@ -277,6 +286,7 @@
         // Samme som før
         let pages
         let permanentIndhold
+        let splash
 
 
 
@@ -298,6 +308,8 @@
 
         let url1 = "http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/pages?categories=6";
         let url2 = "http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/karrusel/781";
+        let url3 = "http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/media/1620";
+
 
 
 
@@ -306,8 +318,11 @@
         async function start() {
             let response1 = await fetch(url1);
             let response2 = await fetch(url2);
+            let response3 = await fetch(url3);
             pages = await response1.json();
-             permanentIndhold = await response2.json();
+            permanentIndhold = await response2.json();
+            splash = await response3.json();
+            visSplash();
             visPages();
             visPermanentIndhold();
         }
@@ -341,6 +356,11 @@
             console.log("Husk nu at rette HTMLen!")
         }
 
+        function visSplash() {
+            console.log("splash loades")
+            document.querySelector("#splash").src = splash.guid.rendered;
+
+        }
 
 
 
@@ -362,9 +382,12 @@
             document.querySelector(".instaBillede4").src = permanentIndhold.billede10.guid;
             document.querySelector(".instaBillede5").src = permanentIndhold.billede11.guid;
         }
+
     </script>
 
 
     <!-- HTML SLUT -->
 
-</body></html>
+</body>
+
+</html>
