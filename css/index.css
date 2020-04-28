@@ -630,160 +630,155 @@ a {
         font-size: 1rem;
     }
 
-    =======width: 250px;
-    height: 250px;
-    padding: 1vw;
+    /*width: 250px;
+height: 250px;
+padding: 1vw;
 
-}
-
-#content {
-    /*  margin-top: 80vh;
 */
-}
 
-.colWrapper {
-    display: flex;
-    flex-direction: column;
-}
-
-.galleri {
-    flex-direction: row;
-}
-
-#img1 {
-    height: 605px;
-    width: 400px;
-}
-
-#img2 {
-    height: 300px;
-    width: 450px;
-    padding-top: 10px;
-}
-
-#img3 {
-    height: 300px;
-    width: 450px;
-}
-
-#img4 {
-    height: 605px;
-    width: 400px;
-}
-
-a {
-    font-size: 1.5rem;
-}
-
-.btm_navbar a {
-    font-size: 1rem;
-}
-
-> > > > > > > origin/master
-}
-
-/*----------Ipad--------*/
-
-@media only screen and (min-width:800px) {
-
-    /*----Generalet-----*/
-    #menuknap {
-        display: none;
-    }
-
-
-
-
-    #menuknap {
-        display: none;
-    }
-
-    #menu {
-
-        height: 6vh;
-        width: 70vw;
-        display: flex;
-        flex-direction: row-reverse;
-
-        background-color: white;
-        padding-right: 4vw;
-        position: static;
-
-        background-color: white;
-        padding-right: 4vw;
-        position: static;
-
-
-    }
-}
-
-
-
-
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-/*----------- L desktop -1600x900-------------*/
-@media only screen and (min-width:1600px) {
     #content {
-        margin-top: 100vh;
-
-    }
-}
-
-/*----------- NORMAL desktop -1920x1080-------------*/
-@media only screen and (min-width:1800px) {
-
-    #tileContainer {
-        margin-left: 20vw;
+        /*  margin-top: 80vh;
+*/
     }
 
-    .catchphrase {
-        margin-left: 2vw;
+    .colWrapper {
+        display: flex;
+        flex-direction: column;
     }
 
-    /*----------- 4K desktop -2560x1641-------------*/
+    .galleri {
+        flex-direction: row;
+    }
 
-    @media only screen and (min-width:2000px) {
+    #img1 {
+        height: 605px;
+        width: 400px;
+    }
 
-        #tileContainer {
+    #img2 {
+        height: 300px;
+        width: 450px;
+        padding-top: 10px;
+    }
 
-            margin: 10vh 0 0 28vw;
+    #img3 {
+        height: 300px;
+        width: 450px;
+    }
+
+    #img4 {
+        height: 605px;
+        width: 400px;
+    }
+
+    a {
+        font-size: 1.5rem;
+    }
+
+    .btm_navbar a {
+        font-size: 1rem;
+    }
+
+
+    /*----------Ipad--------*/
+
+    @media only screen and (min-width:800px) {
+
+        ----Generalet----- #menuknap {
+            display: none;
+        }
+
+
+
+
+        #menuknap {
+            display: none;
+        }
+
+        #menu {
+
+            height: 6vh;
+            width: 70vw;
+            display: flex;
+            flex-direction: row-reverse;
+
+            background-color: white;
+            padding-right: 4vw;
+            position: static;
+
 
         }
 
-        .catchphrase {
-            margin-left: 5vw;
-            font-size: 4rem;
-
+        .dropdown:hover .dropdown-content {
+            display: block;
         }
+    }
 
+
+
+
+
+
+
+    /*----------- L desktop -1600x900-------------*/
+    @media only screen and (min-width:1600px) {
         #content {
             margin-top: 100vh;
 
         }
+    }
 
-        .galleri {
-            margin-left: 10vw;
+    /*----------- NORMAL desktop -1920x1080-------------*/
+    @media only screen and (min-width:1800px) {
+
+        #tileContainer {
+            margin-left: 20vw;
         }
 
-        .tile {
-            height: 480px;
-            width: 550px;
+        .catchphrase {
+            margin-left: 2vw;
         }
 
-        .figur {
-            margin-top: 5vh;
-        }
+        /*----------- 4K desktop -2560x1641-------------*/
 
-        .tekst {
-            font-size: 1.5rem;
-            margin-top: 1vh;
-        }
+        @media only screen and (min-width:2000px) {
 
-        .pris {
-            margin-top: 1vh;
-            font-size: 2rem;
-        }
+            #tileContainer {
+
+                margin: 10vh 0 0 28vw;
+
+            }
+
+            .catchphrase {
+                margin-left: 5vw;
+                font-size: 4rem;
+
+            }
+
+            #content {
+                margin-top: 100vh;
+
+            }
+
+            .galleri {
+                margin-left: 10vw;
+            }
+
+            .tile {
+                height: 480px;
+                width: 550px;
+            }
+
+            .figur {
+                margin-top: 5vh;
+            }
+
+            .tekst {
+                font-size: 1.5rem;
+                margin-top: 1vh;
+            }
+
+            .pris {
+                margin-top: 1vh;
+                font-size: 2rem;
+            }
