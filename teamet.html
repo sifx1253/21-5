@@ -159,6 +159,7 @@
         <img class="splash" src="" alt="">
 
     </div>
+    <h1 class="header">Teamet</h1>
 
     <main id="content">
         <main id="liste"></main>
@@ -167,14 +168,16 @@
     <template>
         <article id="teamet">
             <img class="billede">
-            <h1 class="overskrift"></h1>
+            <h1 class="overskrift lwOverskrift"></h1>
             <p class="beskrivelse"></p>
         </article>
     </template>
 
+
     <div class="breaker">
 
     </div>
+
 
     <!-- Footer CONTENT -->
 
@@ -266,8 +269,9 @@
             destinationer.forEach(destination => {
                 let clone = template.cloneNode(true).content;
 
-                clone.querySelector(".overskrift").textContent = destination.overskrift;
+                clone.querySelector(".overskrift").textContent = destination.navn;
                 clone.querySelector(".billede").src = destination.billede.guid;
+
                 clone.querySelector(".beskrivelse").textContent = destination.beskrivelse;
 
                 console.log(location.href, destination.id)
@@ -304,12 +308,9 @@
             document.querySelector(".instaBillede4").src = permanentIndhold.billede10.guid;
             document.querySelector(".instaBillede5").src = permanentIndhold.billede11.guid;
         }
-
     </script>
 
 
     <!-- HTML SLUT -->
 
-</body>
-
-</html>
+</body></html>

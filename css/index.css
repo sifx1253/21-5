@@ -114,10 +114,8 @@ article {
 
 .billede {
     padding-top: 5vw;
-    width: 70%;
+    width: 80%;
 }
-
-
 
 
 /* Skrot oversigt LOOPVIEW */
@@ -154,6 +152,11 @@ article {
 }
 
 /* Footer elementer */
+
+footer {
+    position: absolute;
+}
+
 .kontakt {
     display: flex;
     flex-direction: column;
@@ -425,7 +428,7 @@ a {
     top: 70%;
     margin-left: -225px;
     font-size: 5rem;
-    color: black
+    color: white;
 }
 
 .tekstblok1 {}
@@ -451,7 +454,7 @@ a {
     z-index: 99;
     position: absolute;
     color: white;
-    font-weight: 900;
+    font-weight: 800;
     font-size: 2.2rem;
     bottom: 10%;
     left: 10%;
@@ -461,7 +464,7 @@ a {
 /* Content elementer */
 .breaker {
 
-    height: 1000px;
+    height: 20vh;
 
 
 
@@ -478,6 +481,16 @@ a {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    line-height: 30px;
+}
+
+#content_fam {
+
+    width: 70vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 30px;
 }
 
 #content_tekst {
@@ -585,7 +598,7 @@ a {
         padding: 1vw;
     }
 
-    #content {
+    #content #tekst_container {
         margin-top: 80vh;
         margin-bottom: 30px;
     }
@@ -654,8 +667,8 @@ padding: 1vw;
 */
 
     #content {
-        /*  margin-top: 80vh;
-*/
+        margin-top: 80vh;
+
     }
 
     .colWrapper {

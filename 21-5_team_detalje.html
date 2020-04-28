@@ -156,7 +156,7 @@
     <!-- CONTENT -->
     <div class="splash_container">
 
-        <img id="splash">
+        <img class="splash">
 
 
     </div>
@@ -230,8 +230,10 @@
         let id = urlParams.get("id");
         let destination;
         let permanentIndhold;
+        let splash
         document.addEventListener("DOMContentLoaded", start)
         let url2 = "http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/karrusel/781";
+        let url3 = "http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/media/1620";
 
 
 
@@ -239,11 +241,15 @@
             let jsonData = await fetch(`http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/teamet/${id}`);
             destination = await jsonData.json();
             let response2 = await fetch(url2);
+            let response3 = await fetch(url3);
             permanentIndhold = await response2.json();
+            splash = await response3.json();
 
             visTilbage();
             visDestination();
+            visSplash();
             visPermanentIndhold();
+
         }
 
         function visDestination() {
@@ -263,6 +269,12 @@
             });
         }
 
+        function visSplash() {
+            console.log("splash loades")
+            document.querySelector(".splash").src = splash.guid.rendered;
+
+        }
+
         function visPermanentIndhold() {
             console.log("Permanent indhold hentes")
             document.querySelector("#logo").src = permanentIndhold.billede1.guid;
@@ -277,12 +289,9 @@
             document.querySelector(".instaBillede4").src = permanentIndhold.billede10.guid;
             document.querySelector(".instaBillede5").src = permanentIndhold.billede11.guid;
         }
-
     </script>
 
 
     <!-- HTML SLUT -->
 
-</body>
-
-</html>
+</body></html>
