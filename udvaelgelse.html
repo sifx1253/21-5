@@ -156,14 +156,102 @@
   <!-- CONTENT -->
   <div class="splash_container">
 
-    <img class="splash" src="" alt="">
+    <img id="splash" src="" alt="">
 
   </div>
   <h1 class="header">Udvælgelse</h1>
 
   <main id="content">
     <h1 id="overskrift"></h1>
-    <p id="brødtekst"></p>
+    <p id="brødtekst-udv-1"></p>
+    <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <img src="" class="slide1">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="" class="slide2">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="" class="slide3">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="" class="slide4">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="" class="slide5">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="" class="slide6">
+      </div>
+
+
+      <div class="mySlides fade">
+        <img src="" class="slide7">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="" class="slide8">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="" class="slide9">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="" class="slide10">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="" class="slide11">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="" class="slide12">
+      </div>
+
+
+      <div class="mySlides fade">
+        <img src="" class="slide13">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="" class="slide14">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="" class="slide15">
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
+      <span class="dot" onclick="currentSlide(6)"></span>
+      <span class="dot" onclick="currentSlide(7)"></span>
+      <span class="dot" onclick="currentSlide(8)"></span>
+      <span class="dot" onclick="currentSlide(9)"></span>
+      <span class="dot" onclick="currentSlide(10)"></span>
+      <span class="dot" onclick="currentSlide(11)"></span>
+      <span class="dot" onclick="currentSlide(12)"></span>
+      <span class="dot" onclick="currentSlide(13)"></span>
+      <span class="dot" onclick="currentSlide(14)"></span>
+      <span class="dot" onclick="currentSlide(15)"></span>
+    </div>
+    <p id="brødtekst-udv-2"></p>
   </main>
 
 
@@ -226,21 +314,26 @@
     // LAV EN VARIABLE TIL AT BEGYNDE MED
     let udvælg
     let logo
+    let billeder
 
     // SKRIV JSON URL IND HER OG FORBIND MED VARIABEL
     //Find ID her: http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/posts?per_page=100
     // CTRL+F/Søg i vieweren efter pagens slug, så finder du den hurtigt
     let url1 = "http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/pages/769";
     let url2 = "http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/karrusel/781";
+    let url3 = "http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/karrusel/2076";
 
     // HER TILSKRIVES OVENSTÅENDE VARIIABLE OG DENS FUNKTION SKAL STARTES
     async function start() {
       let response1 = await fetch(url1);
       let response2 = await fetch(url2);
+      let response3 = await fetch(url3);
       udvælg = await response1.json();
       permanentIndhold = await response2.json();
+      billeder = await response3.json();
       visUdvælg();
       visPermanentIndhold();
+      hentBilleder();
     }
 
     // FUNKTION HENTER DATA - HENVISER TIL ID, CLASS ELLER TAG I HTML'EN - TAG HØJDE FOR TEXTCONTENT, INNERHTML, SRC OSV.
@@ -262,9 +355,63 @@
       document.querySelector(".instaBillede5").src = permanentIndhold.billede11.guid;
     }
 
+    function hentBilleder() {
+      console.log(billeder)
+
+      document.querySelector(".slide1").src = billeder.billede1.guid;
+      document.querySelector(".slide2").src = billeder.billede2.guid;
+      document.querySelector(".slide3").src = billeder.billede3.guid;
+      document.querySelector(".slide4").src = billeder.billede4.guid;
+      document.querySelector(".slide5").src = billeder.billede5.guid;
+      document.querySelector(".slide6").src = billeder.billede6.guid;
+      document.querySelector(".slide7").src = billeder.billede7.guid;
+      document.querySelector(".slide8").src = billeder.billede8.guid;
+      document.querySelector(".slide9").src = billeder.billede9.guid;
+      document.querySelector(".slide10").src = billeder.billede10.guid;
+      document.querySelector(".slide11").src = billeder.billede11.guid;
+      document.querySelector(".slide12").src = billeder.billede12.guid;
+      document.querySelector(".slide13").src = billeder.billede13.guid;
+      document.querySelector(".slide14").src = billeder.billede14.guid;
+      document.querySelector(".slide15").src = billeder.billede15.guid;
+      showSlides();
+    }
+
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {
+        slideIndex = 1
+      }
+      if (n < 1) {
+        slideIndex = slides.length
+      }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+    }
+
+
     function visUdvælg() {
       console.log("Page data loades")
-      document.querySelector("#brødtekst").innerHTML = udvælg.content.rendered;
+      document.querySelector("#brødtekst-udv-1").innerHTML = udvælg.content.rendered;
+      document.querySelector("#brødtekst-udv-2").innerHTML = udvælg.content.rendered;
       document.querySelector("#splash").src = udvælg.better_featured_image.source_url;
 
     }

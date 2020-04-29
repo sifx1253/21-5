@@ -1,47 +1,43 @@
 *,
 body {
-
-    text-decoration: none;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    /*-ms-overflow-style: none;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /*-ms-overflow-style: none;
 overflow: -moz-scrollbars-none;
 overflow-x: hidden;*/
-    font-family: 'Raleway', sans-serif;
-
+  font-family: 'Raleway', sans-serif;
 }
 
-
 .center {
-    display: block;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #pil {
-    display: block;
-    width: 50px;
-    height: 15px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 70px;
+  display: block;
+  width: 50px;
+  height: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 70px;
 }
 
 /* Tile Loopview elementer */
 .titleBlock {
-    width: 300px;
-    height: 100px;
-    background-color: white;
-
-    position: absolute;
-    margin: auto;
-    z-index: 988;
+  width: 300px;
+  height: 100px;
+  background-color: white;
+  position: absolute;
+  margin: auto;
+  z-index: 988;
 }
 
 article img {
-    width: 100%;
+  width: 100%;
 }
 
 /*
@@ -54,825 +50,863 @@ article img {
     z-index: 99;
 }
 */
-
 .tile {
-    height: 330px;
-    width: 350px;
-    margin-left: 12px;
-    margin-right: 12px;
-    background-color: #EAEDEA;
-    padding: 1vw;
-    cursor: pointer;
-
+  height: 330px;
+  width: 350px;
+  margin-left: 12px;
+  margin-right: 12px;
+  background-color: #EAEDEA;
+  padding: 1vw;
+  cursor: pointer;
 }
 
 #tileContainer {
-    position: absolute;
-    max-width: 1200px;
-    /*margin-left: -600px;*/
-    /*left: 50%;*/
-    top: 20vh;
-    display: flex;
-    flex-direction: column;
-
+  position: absolute;
+  max-width: 1200px;
+  /*margin-left: -600px;*/
+  /*left: 50%;*/
+  top: 20vh;
+  display: flex;
+  flex-direction: column;
 }
 
 #wrapper {
-    position: absolute;
+  position: absolute;
 }
 
-
 article {
-    overflow: hidden;
-    position: relative;
-    height: 100%;
-    width: 100%;
-    /*    margin: 25px;*/
-    background-color: white;
-    /*    padding: 30px;*/
-
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  /*    margin: 25px;*/
+  background-color: white;
+  /*    padding: 30px;*/
 }
 
 /* TEAM LOOPVIEW */
 #person {
-    margin: 25px;
-    background-color: white;
-    padding: 30px;
-
+  margin: 25px;
+  background-color: white;
+  padding: 30px;
 }
 
-
 #liste {
-    max-width: 1200px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-gap: 30px;
-    background-color: #fff;
-    color: #444;
-
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 30px;
+  background-color: #fff;
+  color: #444;
 }
 
 .billede {
-    padding-top: 5vw;
-    width: 80%;
+  padding-top: 5vw;
+  width: 80%;
 }
-
 
 /* Skrot oversigt LOOPVIEW */
 #skrotOversigt {
-    height: 400px;
-    width: 400px;
-    margin: 25px;
-    background-color: white;
-    padding: 30px;
+  height: 400px;
+  width: 400px;
+  margin: 25px;
+  background-color: white;
+  padding: 30px;
 }
 
 .galleri {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
 }
 
 .rowWrapper {
-    display: inline-block;
-    flex-direction: row;
-    margin: 0;
-    padding: 0;
-
+  display: inline-block;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
 }
 
 .colWrapper {}
 
 .colWrapper {
-
-
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 /* Footer elementer */
-
 footer {
-    position: absolute;
+  position: absolute;
 }
 
 .kontakt {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .links {
-    display: flex;
-    flex-direction: column;
-
+  display: flex;
+  flex-direction: column;
 }
 
 .topFooter {
-    margin-left: auto;
-    margin-right: auto;
-    width: 95vw;
-
-    -ms-overflow-style: none;
-    overflow: -moz-scrollbars-none;
-    overflow-x: hidden;
-    border-top: 2px black solid;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95vw;
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+  overflow-x: hidden;
+  border-top: 2px black solid;
 }
 
 .btmFooter {
-    width: 100vw;
-    height: 300px;
+  width: 100vw;
+  height: 300px;
 }
 
 .someFooter {
-    width: 100vw;
-    height: 60px;
-    background-color: #EAEDEA;
+  width: 100vw;
+  height: 60px;
+  background-color: #EAEDEA;
 }
 
 #instaBilleder {
-    width: 200px;
-    height: 200px;
-    padding: 2vw;
-
+  width: 200px;
+  height: 200px;
+  padding: 2vw;
 }
 
 #facebook {
-    height: 40px;
-    width: auto;
-    margin: auto;
-    padding: 10px;
-    z-index: 99999;
+  height: 40px;
+  width: auto;
+  margin: auto;
+  padding: 10px;
+  z-index: 99999;
 }
 
 #insta {
-    height: 40px;
-    width: auto;
-    margin: auto;
-    padding: 10px;
-    z-index: 99999;
+  height: 40px;
+  width: auto;
+  margin: auto;
+  padding: 10px;
+  z-index: 99999;
 }
 
 /* Header elementer */
 #language {
-    height: 30px;
-    width: auto;
-    position: absolute;
-    right: 90px;
-    z-index: 99999;
-    margin: 5px;
-    padding: 5px;
+  height: 30px;
+  width: auto;
+  position: absolute;
+  right: 90px;
+  z-index: 99999;
+  margin: 5px;
+  padding: 5px;
 }
 
 #user-login {
-    height: 40px;
-    width: auto;
-    position: absolute;
-    right: 20px;
-    z-index: 99999;
-    margin: 5px;
+  height: 40px;
+  width: auto;
+  position: absolute;
+  right: 20px;
+  z-index: 99999;
+  margin: 5px;
 }
 
 #logo {
-    height: 100px;
-    width: auto;
-    z-index: 99999;
-    position: absolute;
-    left: 20px;
+  height: 100px;
+  width: auto;
+  z-index: 99999;
+  position: absolute;
+  left: 20px;
 }
 
 .forside-link {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .fa-caret-down {
-    color: black;
-    opacity: 20%;
+  color: black;
+  opacity: 20%;
 }
 
 /* NAV elementer */
 .hidden {
-
-    visibility: hidden;
+  visibility: hidden;
 }
 
 #menuknap {
-
-    display: inline-block;
-    color: black;
-    margin: 0.5rem;
-    display: flex;
-    flex-direction: column;
-    float: right;
-
+  display: inline-block;
+  color: black;
+  margin: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  float: right;
 }
 
 #menu {
-    display: block;
-    height: 100vh;
-    width: 50vw;
-    display: flex;
-    flex-direction: column;
-    float: right;
-    background-color: white;
-    top: 12vh;
-    left: 50vw;
-    position: absolute;
-
+  display: block;
+  height: 100vh;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  float: right;
+  background-color: white;
+  top: 12vh;
+  left: 50vw;
+  position: absolute;
 }
 
 nav {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    height: 100px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100px;
 }
 
 .top_navbar {
-    height: 50px;
-    width: 100vw;
-    overflow: hidden;
-    background-color: #EAEDEA;
-    z-index: 3;
+  height: 50px;
+  width: 100vw;
+  overflow: hidden;
+  background-color: #EAEDEA;
+  z-index: 3;
 }
 
 .btm_navbar {
-    height: 50px;
-    width: 100vw;
-    /*overflow: hidden;*/
-    background-color: white;
-    z-index: 3;
+  height: 50px;
+  width: 100vw;
+  /*overflow: hidden;*/
+  background-color: white;
+  z-index: 3;
 }
 
 .btm_navbar a {
-    float: right;
-    font-size: 1rem;
-    color: black;
-    text-align: center;
-    padding-left: 5px;
-    padding-right: 20px;
-    text-decoration: none;
+  float: right;
+  font-size: 1rem;
+  color: black;
+  text-align: center;
+  padding-left: 5px;
+  padding-right: 20px;
+  text-decoration: none;
 }
 
 .dropdown {
-    float: right;
-    overflow: hidden;
+  float: right;
+  overflow: hidden;
 }
 
 .dropdown .dropbtn {
-    font-size: 16px;
-    border: none;
-    outline: none;
-    color: white;
-    background-color: white;
-    font-family: inherit;
-    margin: 0;
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-top: 25px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: white;
+  font-family: inherit;
+  margin: 0;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 25px;
 }
 
 .fa {
-    display: block;
+  display: block;
 }
 
 .btm_navbar a:hover,
 .dropdown:hover .dropbtn {
-    background-color: #f9f9f9;
+  background-color: #f9f9f9;
 }
 
 .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #EAEDEA;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+  display: none;
+  position: absolute;
+  background-color: #EAEDEA;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 
 .dropdown-content a {
-    float: none;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
 }
 
 .dropdown-content a:hover {
-    background-color: #ddd;
+  background-color: #ddd;
 }
 
 .dropdown:hover .dropdown-content {
-    /*display: block;*/
+  /*display: block;*/
 }
 
 /* Tekst elementer */
 h1 {
-    font-size: 2.2rem;
-    font-family: 'Raleway', sans-serif;
-    text-align: center;
-    margin: 0;
+  font-size: 2.2rem;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  margin: 0;
 }
 
 h2 {
-    font-family: 'Raleway', sans-serif;
-    font-size: 1.5rem;
-    text-align: center;
-    margin-top: 50px;
-    margin-bottom: 25px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 25px;
 }
 
 h3 {
-    font-family: 'Raleway', sans-serif;
-    font-size: 1.3rem;
-    text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.3rem;
+  text-align: center;
 }
 
 h4 {
-    font-family: 'Raleway', sans-serif;
-    font-size: 1rem;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
 }
 
 p {
-    font-family: 'Montserrat', sans-serif;
-    text-align: left;
-    font-size: 1rem;
-    column-span: all;
-    padding: 5px;
+  font-family: 'Montserrat', sans-serif;
+  text-align: left;
+  font-size: 1rem;
+  column-span: all;
+  padding: 5px;
 }
 
 a {
-    text-decoration: none;
-    color: #073052;
-    font-weight: bold;
+  text-decoration: none;
+  color: #073052;
+  font-weight: bold;
 }
 
 .catchphrase {
-    position: absolute;
-
-    left: 50%;
-    top: 34%;
-    margin-left: -225px;
-    font-size: 3rem;
-    margin-top: 10vw;
-    left: 35%;
-    top: 34%;
-
-    font-size: 3rem;
+  position: absolute;
+  left: 50%;
+  top: 34%;
+  margin-left: -225px;
+  font-size: 3rem;
+  margin-top: 10vw;
+  left: 35%;
+  top: 34%;
+  font-size: 3rem;
 }
 
 .header {
-    position: absolute;
-    left: 40%;
-    top: 70%;
-    margin-left: -225px;
-    font-size: 5rem;
-    color: white;
+  position: absolute;
+  left: 40%;
+  top: 70%;
+  margin-left: -225px;
+  font-size: 5rem;
+  color: white;
 }
 
 .tekstblok1 {}
 
 .tekstblok2 {
-
-    column-gap: 40px;
-    column-fill: balance;
-
-    column-gap: 40px;
-    column-fill: balance;
-
-
+  column-gap: 40px;
+  column-fill: balance;
+  column-gap: 40px;
+  column-fill: balance;
 }
 
 #underoverskrift {
-    font-family: 'Raleway', sans-serif;
-    margin-top: 10vh;
+  font-family: 'Raleway', sans-serif;
+  margin-top: 10vh;
 }
 
 .lwOverskrift {
-    font-family: 'Raleway', sans-serif;
-    z-index: 99;
-    position: absolute;
-    color: white;
-    font-weight: 800;
-    font-size: 2.2rem;
-    bottom: 10%;
-    left: 10%;
-
+  font-family: 'Raleway', sans-serif;
+  z-index: 99;
+  position: absolute;
+  color: white;
+  font-weight: 800;
+  font-size: 2.2rem;
+  bottom: 10%;
+  left: 10%;
 }
 
 /*indretning*/
 .billede_indretning img {
-    width: 50%;
+  width: 50%;
 }
 
-
 /******Online booking*****/
-
 #sporgsmal {
-    padding: 2rem;
+  padding: 2rem;
 }
 
 .accordion {
-    background-color: #c7aea0;
-    color: white;
-    cursor: pointer;
-    padding: 18px;
-    width: 20rem;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 1.5rem;
-    transition: 0.4s;
+  background-color: #c7aea0;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 20rem;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 1.5rem;
+  transition: 0.4s;
 }
 
 .active,
 .accordion:hover {
-    background-color: #a17d6b;
+  background-color: #a17d6b;
 }
 
 .accordion:after {
-    content: '\002B';
-    color: #453832;
-    font-weight: bold;
-    float: right;
-    margin-left: 5px;
+  content: '\002B';
+  color: #453832;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
 }
 
 .active:after {
-    content: "\2212";
+  content: "\2212";
 }
 
 .panel {
-    padding: 0 18px;
-    background-color: white;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
 }
 
 /*SLUT*/
-
 /* Content elementer */
 .breaker {
-
-    height: 20vh;
-
-
-
+  height: 20vh;
 }
 
 .breaker2 {
-    height: 200px;
+  height: 200px;
 }
 
 #content {
-
-    width: 70vw;
-    margin-top: 160vh;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 30px;
+  width: 70vw;
+  margin-top: 160vh;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 30px;
 }
 
 #content_fam {
-
-    width: 70vw;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 30px;
+  width: 70vw;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 30px;
 }
 
 #content_tekst {
-
-    width: 70vw;
-    margin-top: 60vh;
-    display: block;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+  width: 70vw;
+  margin-top: 60vh;
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .galleri {
-    margin-left: 25px;
-    margin-right: auto;
+  margin-left: 25px;
+  margin-right: auto;
 }
 
 #img1 {
-    height: 400px;
-    width: 400px;
+  height: 400px;
+  width: 400px;
 }
 
 #img2 {
-    height: 400px;
-    width: 400px;
-
+  height: 400px;
+  width: 400px;
 }
 
 #img3 {
-    height: 400px;
-    width: 400px;
+  height: 400px;
+  width: 400px;
 }
 
 #img4 {
-    height: 400px;
-    width: 400px;
+  height: 400px;
+  width: 400px;
 }
 
 .galleri .ver_img {
-    padding: 10px;
+  padding: 10px;
 }
 
-
-
-
 .splash {
-    width: 100vw;
-    object-fit: cover;
-    height: 70vh;
-    /*   max-height: 90vh;
+  width: 100vw;
+  object-fit: cover;
+  height: 70vh;
+  /*   max-height: 90vh;
     max-width: 1200px;*/
-
-    top: 0;
-    left: 0;
-    Position: absolute;
-    z-index: -99;
+  top: 0;
+  left: 0;
+  Position: absolute;
+  z-index: -99;
 }
 
 #splash {
-    width: 100vw;
-    object-fit: cover;
-    height: 70vh;
-    /*   max-height: 90vh;
+  width: 100vw;
+  object-fit: cover;
+  height: 70vh;
+  /*   max-height: 90vh;
     max-width: 1200px;*/
-
-    top: 0;
-    left: 0;
-    Position: absolute;
-    z-index: -99;
+  top: 0;
+  left: 0;
+  Position: absolute;
+  z-index: -99;
 }
 
-
-
 .splash_container {
-    position: relative;
-    width: 100vw;
-
-
+  position: relative;
+  width: 100vw;
 }
 
 /****KONTAKT****/
 #tekst_container {
-    position: absolute;
-    text-align: 20px;
-
+  position: absolute;
+  text-align: 20px;
 }
 
+/****Skjul af kolonner på siden Udvælgelse****/
+#brødtekst-udv-1 .tekstblok2 {
+  display: none;
+}
 
+#brødtekst-udv-2 .overskrift-udv-1 {
+  display: none;
+}
+
+#brødtekst-udv-2 .tekstblok1 {
+  display: none;
+}
+
+#brødtekst-udv-1 .overskrift-udv-2 {
+  display: none;
+}
+
+/**** SLIDESHOW CSS - Eksisterende W3schools klasser - referer til hjemmesiden How To Slideshow ****/
+.mySlides {
+  display: none
+}
+
+.slideshow-container img {
+  max-height: 800px;
+  max-width: 1000px;
+  margin: auto;
+  vertical-align: middle;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
+}
 
 @media screen and (min-width: 600px) {
-    .tekstblok2 {
-        column-count: 2;
-    }
 
-    #tileContainer {
-        flex-direction: row;
-        margin-left: 15vw;
-        top: 50vh;
-    }
+  /****Knapper i Slideshow****/
+  .prev,
+  .next,
+  .text {
+    font-size: 11px
+  }
 
-    #instaBilleder {
+  /********/
+  .tekstblok2 {
+    column-count: 2;
+  }
 
-        width: 300px;
-        height: 300px;
-        padding: 1vw;
-    }
+  #tileContainer {
+    flex-direction: row;
+    margin-left: 15vw;
+    top: 50vh;
+  }
 
-    #content #tekst_container {
-        margin-top: 80vh;
-        margin-bottom: 30px;
-    }
+  #instaBilleder {
+    width: 300px;
+    height: 300px;
+    padding: 1vw;
+  }
 
-    #content_liste {
-        position: absolute;
-        margin-top: 70vw;
-        padding: 40px;
-    }
+  #content #tekst_container {
+    margin-top: 80vh;
+    margin-bottom: 30px;
+  }
 
-    #content_tekst {
-        margin-top: 5px;
-        margin-bottom: 30px;
-        line-height: 25px;
-    }
+  #content_liste {
+    position: absolute;
+    margin-top: 70vw;
+    padding: 40px;
+  }
 
-    /*
+  #content_tekst {
+    margin-top: 5px;
+    margin-bottom: 30px;
+    line-height: 25px;
+  }
+
+  /*
 
     #content_tekst .underoverskrift {
         text-align: left;
     }
 */
+  .colWrapper {
+    display: flex;
+    flex-direction: column;
+  }
 
-    .colWrapper {
-        display: flex;
-        flex-direction: column;
-    }
+  .galleri {
+    flex-direction: row;
+  }
 
-    .galleri {
-        flex-direction: row;
-    }
+  #img1 {
+    height: 605px;
+    width: 400px;
+  }
 
-    #img1 {
-        height: 605px;
-        width: 400px;
-    }
+  #img2 {
+    height: 300px;
+    width: 450px;
+    padding-top: 10px;
+  }
 
-    #img2 {
-        height: 300px;
-        width: 450px;
-        padding-top: 10px;
-    }
+  #img3 {
+    height: 300px;
+    width: 450px;
+  }
 
-    #img3 {
-        height: 300px;
-        width: 450px;
-    }
+  #img4 {
+    height: 605px;
+    width: 400px;
+  }
 
-    #img4 {
-        height: 605px;
-        width: 400px;
-    }
+  a {
+    font-size: 1.5rem;
+  }
 
-    a {
-        font-size: 1.5rem;
-    }
+  .btm_navbar a {
+    font-size: 1rem;
+  }
 
-    .btm_navbar a {
-        font-size: 1rem;
-    }
-
-    /*width: 250px;
+  /*width: 250px;
 height: 250px;
 padding: 1vw;
 
 */
+  #content {
+    margin-top: 80vh;
+  }
 
-    #content {
-        margin-top: 80vh;
+  .colWrapper {
+    display: flex;
+    flex-direction: column;
+  }
 
+  .galleri {
+    flex-direction: row;
+  }
+
+  #img1 {
+    height: 605px;
+    width: 400px;
+  }
+
+  #img2 {
+    height: 300px;
+    width: 450px;
+    padding-top: 10px;
+  }
+
+  #img3 {
+    height: 300px;
+    width: 450px;
+  }
+
+  #img4 {
+    height: 605px;
+    width: 400px;
+  }
+
+  a {
+    font-size: 1.5rem;
+  }
+
+  .btm_navbar a {
+    font-size: 1rem;
+  }
+
+  /*----------Ipad--------*/
+  @media only screen and (min-width:800px) {
+    #menuknap {
+      display: none;
     }
 
-    .colWrapper {
-        display: flex;
-        flex-direction: column;
+    #menuknap {
+      display: none;
+    }
+
+    #menu {
+      height: 6vh;
+      width: 70vw;
+      display: flex;
+      flex-direction: row-reverse;
+      background-color: white;
+      padding-right: 4vw;
+      position: static;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+  }
+
+  /*----------- L desktop -1600x900-------------*/
+  @media only screen and (min-width:1600px) {
+    #content {
+      margin-top: 60vh;
+    }
+
+    .catchphrase {
+      margin-left: 2vw;
     }
 
     .galleri {
-        flex-direction: row;
+      margin-left: -1vw;
+    }
+  }
+
+  /*----------- NORMAL desktop -1920x1080-------------*/
+  @media only screen and (min-width:1800px) {
+    #tileContainer {
+      margin-left: 20vw;
     }
 
-    #img1 {
-        height: 605px;
-        width: 400px;
+    .catchphrase {
+      margin-left: 2vw;
+    }
+  }
+
+  /*----------- 4K desktop -2560x1641-------------*/
+  @media only screen and (min-width:2000px) {
+    #tileContainer {
+      margin: 5vh 0 0 28vw;
     }
 
-    #img2 {
-        height: 300px;
-        width: 450px;
-        padding-top: 10px;
+    .catchphrase {
+      margin-left: 5vw;
+      font-size: 4rem;
     }
 
-    #img3 {
-        height: 300px;
-        width: 450px;
+    #content {
+      margin-top: 100vh;
     }
 
-    #img4 {
-        height: 605px;
-        width: 400px;
+    .galleri {
+      margin-left: 10vw;
     }
 
-    a {
-        font-size: 1.5rem;
+    .tile {
+      height: 480px;
+      width: 550px;
     }
 
-    .btm_navbar a {
-        font-size: 1rem;
+    .figur {
+      margin-top: 5vh;
     }
 
-
-    /*----------Ipad--------*/
-
-    @media only screen and (min-width:800px) {
-
-        #menuknap {
-            display: none;
-        }
-
-
-
-
-        #menuknap {
-            display: none;
-        }
-
-        #menu {
-
-            height: 6vh;
-            width: 70vw;
-            display: flex;
-            flex-direction: row-reverse;
-
-            background-color: white;
-            padding-right: 4vw;
-            position: static;
-
-
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
+    .tekst {
+      font-size: 1.5rem;
+      margin-top: 1vh;
     }
 
-
-
-
-
-
-
-    /*----------- L desktop -1600x900-------------*/
-    @media only screen and (min-width:1600px) {
-        #content {
-            margin-top: 60vh;
-
-        }
-
-        .catchphrase {
-            margin-left: 2vw;
-        }
-
-        .galleri {
-            margin-left: -1vw;
-        }
-
+    .pris {
+      margin-top: 1vh;
+      font-size: 2rem;
     }
-
-    /*----------- NORMAL desktop -1920x1080-------------*/
-    @media only screen and (min-width:1800px) {
-
-        #tileContainer {
-            margin-left: 20vw;
-        }
-
-        .catchphrase {
-            margin-left: 2vw;
-        }
-
-
-    }
-
-    /*----------- 4K desktop -2560x1641-------------*/
-
-    @media only screen and (min-width:2000px) {
-
-        #tileContainer {
-
-            margin: 5vh 0 0 28vw;
-
-        }
-
-        .catchphrase {
-            margin-left: 5vw;
-            font-size: 4rem;
-
-        }
-
-        #content {
-            margin-top: 100vh;
-
-        }
-
-        .galleri {
-            margin-left: 10vw;
-        }
-
-        .tile {
-            height: 480px;
-            width: 550px;
-        }
-
-        .figur {
-            margin-top: 5vh;
-        }
-
-        .tekst {
-            font-size: 1.5rem;
-            margin-top: 1vh;
-        }
-
-        .pris {
-            margin-top: 1vh;
-            font-size: 2rem;
-        }
