@@ -279,7 +279,7 @@
   </div>
 
   <main id="content">
-    <button id="go-back">Go back!</button>
+    <img id="go-back" src="">
     <h1 class="overskrift"></h1>
     <h2 class="firstunderoverskrift"></h2>
     <p class="firstbeskrivelse"></p>
@@ -453,7 +453,6 @@
       let response3 = await fetch(url3);
       billeder = await response3.json();
 
-      visTilbage();
       visDestination();
       visPermanentIndhold();
       hentBilleder();
@@ -474,12 +473,6 @@
       document.querySelector(".tredjebeskrivelse").textContent = destination.tredjebeskrivelse;
     }
 
-    function visTilbage() {
-      document.getElementById('go-back').addEventListener('click', () => {
-        history.back();
-      });
-    }
-
     function visPermanentIndhold() {
       console.log("Permanent indhold hentes")
       document.querySelector("#logo").src = permanentIndhold.billede1.guid;
@@ -493,6 +486,8 @@
       document.querySelector(".instaBillede3").src = permanentIndhold.billede9.guid;
       document.querySelector(".instaBillede4").src = permanentIndhold.billede10.guid;
       document.querySelector(".instaBillede5").src = permanentIndhold.billede11.guid;
+      console.log("Tilbage knap indsættes")
+      document.querySelector("#go-back").src = permanentIndhold.billede12.guid;
     }
 
 
@@ -514,7 +509,8 @@
       document.querySelector(".slide13").src = billeder.billede13.guid;
       document.querySelector(".slide14").src = billeder.billede14.guid;
       document.querySelector(".slide15").src = billeder.billede15.guid;
-      showSlide();
+      console.log("Hvis den siger showSlide ikke kan findes, så ret den til showSlides() - Ups!")
+      showSlides();
     }
 
 
@@ -547,6 +543,12 @@
       }
       slides[slideIndex - 1].style.display = "block";
       dots[slideIndex - 1].className += " active";
+    }
+
+    function visTilbage() {
+      document.getElementById('#go-back').addEventListener('click', () => {
+        history.back();
+      });
     }
   </script>
 
