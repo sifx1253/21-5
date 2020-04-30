@@ -488,6 +488,8 @@ a {
 
 /*SLUT*/
 /* Content elementer */
+
+
 .breaker {
     height: 20vh;
 }
@@ -505,6 +507,7 @@ a {
     line-height: 30px;
 }
 
+/***FORSIDE***/
 #content_fam {
     width: 70vw;
     display: block;
@@ -521,6 +524,8 @@ a {
     margin-left: auto;
     margin-right: auto;
 }
+
+#galleri_forside {}
 
 .galleri {
     margin-left: 25px;
