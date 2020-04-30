@@ -59,7 +59,7 @@
 
                 <div class="dropdown">
                     <button class="dropbtn">
-                        <a href="om_os.html">Om Os</a>
+                        <a href="om-os.html">Om Os</a>
                         <i class="fa fa-caret-down"></i>
                     </button>
                     <div class="dropdown-content">
@@ -163,7 +163,6 @@
             </div>
         </div>
     </nav>
-
     <!-- CONTENT -->
     <div class="splash_container">
 
@@ -252,6 +251,8 @@
             permanentIndhold = await response2.json();
             vistiAar();
             visPermanentIndhold();
+            toggleMenu();
+
         }
 
         // FUNKTION HENTER DATA - HENVISER TIL ID, CLASS ELLER TAG I HTML'EN - TAG HØJDE FOR TEXTCONTENT, INNERHTML, SRC OSV.
@@ -279,11 +280,22 @@
             document.querySelector(".instaBillede5").src = permanentIndhold.billede11.guid;
         }
 
+
+        function toggleMenu() {
+            console.log("toggleMenu");
+            document.querySelector("#menu").classList.toggle("hidden");
+
+            let erSkjult = document.querySelector("#menu").classList.contains("hidden");
+
+            if (erSkjult == true) {
+                document.querySelector("#menuknap").textContent = "X";
+            } else {
+                document.querySelector("#menuknap").textContent = "☰";
+            }
+        }
     </script>
 
 
     <!-- HTML SLUT -->
 
-</body>
-
-</html>
+</body></html>
