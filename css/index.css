@@ -716,9 +716,10 @@ a {
     }
 
     #instaBilleder {
-        width: 300px;
-        height: 300px;
+        width: 250px;
+        height: 250px;
         padding: 1vw;
+        object-fit: cover;
     }
 
     #content #tekst_container {
