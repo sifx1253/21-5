@@ -111,17 +111,13 @@
                         <a href="hvorfor_detalje.html">Hvordan sælger vi vores andel igen?</a>
                         <a href="hvorfor_detalje.html?id=384">Derfor købe en andel?</a>
                         <a href="hvorfor_detalje.html?id=387">Hvordan kommer vi med?</a>
-                        <!--
-           MANGLER
-          <a href="04.04.00.html">I binder jer først endeligt når i har mødt de andre familier</a>
--->
+
                         <a href="hvorfor_detalje.html?id=385">Fordi det giver mening</a>
                         <a href="hvorfor_detalje.html?id=388">Bookingsystemet fordeling af ugerne (fed knap)</a>
                         <a href="hvorfor_detalje.html?id=382">21-5 konceptet</a>
-                        <!--
-           MANGLER
-          <a href="04.08.00.html">Fællesskab i foreningerne</a>
--->
+                        <!--MANGLER
+                        <a href="04.04.00.html">I binder jer først endeligt når i har mødt de andre familier</a>
+          <a href="04.08.00.html">Fællesskab i foreningerne</a>-->
                     </div>
                 </div>
 
@@ -280,7 +276,7 @@
                 let clone = template.cloneNode(true).content;
 
                 clone.querySelector(".overskrift").textContent = destination.overskrift;
-                clone.querySelector(".billede").src = destination.billede.guid;
+                clone.querySelector(".billede").src = destination.splash.guid;
                 clone.querySelector(".tekst").textContent = destination.beskrivelse;
 
                 console.log(location.href, destination.id)
