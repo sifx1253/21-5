@@ -40,6 +40,7 @@
             height: auto;
             margin: auto;
         }
+
     </style>
 </head>
 
@@ -218,6 +219,7 @@
         // Samme som før
         let pages
         let logo
+        let splash
 
 
         // Loopview'et henter title og splash billede fra de pages, vi har lavet.1. Lav en kategori i WordpressPages -> Categories -> Add New
@@ -238,6 +240,8 @@
 
         let url1 = "http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/pages?categories=4";
         let url2 = "http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/media/220";
+        let url3 = "http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/media/1620";
+
 
 
 
@@ -245,10 +249,15 @@
         async function start() {
             let response1 = await fetch(url1);
             let response2 = await fetch(url2);
+            let response3 = await fetch(url3);
             pages = await response1.json();
             logo = await response2.json();
+            splash = await response3.json();
+            visSplash();
             visPages();
             visLogo();
+            toggleMenu();
+
         }
 
 
@@ -280,6 +289,12 @@
             console.log("Husk nu at rette HTMLen!")
         }
 
+        function visSplash() {
+            console.log("splash loades")
+            document.querySelector("#splash").src = splash.guid.rendered;
+
+        }
+
 
 
         // Permanent indhold hentes i Footer funktionenen
@@ -289,9 +304,25 @@
             document.querySelector("#logo").src = logo.source_url;
 
         }
+
+        function toggleMenu() {
+            console.log("toggleMenu");
+            document.querySelector("#menu").classList.toggle("hidden");
+
+            let erSkjult = document.querySelector("#menu").classList.contains("hidden");
+
+            if (erSkjult == true) {
+                document.querySelector("#menuknap").textContent = "X";
+            } else {
+                document.querySelector("#menuknap").textContent = "☰";
+            }
+        }
+
     </script>
 
 
     <!-- HTML SLUT -->
 
-</body></html>
+</body>
+
+</html>

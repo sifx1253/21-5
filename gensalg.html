@@ -251,6 +251,7 @@
             visDestinationer();
             visPermanentIndhold();
             visSplah();
+            toggleMenu();
 
         }
 
@@ -301,6 +302,19 @@
             document.querySelector(".instaBillede3").src = permanentIndhold.billede9.guid;
             document.querySelector(".instaBillede4").src = permanentIndhold.billede10.guid;
             document.querySelector(".instaBillede5").src = permanentIndhold.billede11.guid;
+        }
+
+        function toggleMenu() {
+            console.log("toggleMenu");
+            document.querySelector("#menu").classList.toggle("hidden");
+
+            let erSkjult = document.querySelector("#menu").classList.contains("hidden");
+
+            if (erSkjult == true) {
+                document.querySelector("#menuknap").textContent = "X";
+            } else {
+                document.querySelector("#menuknap").textContent = "☰";
+            }
         }
 
     </script>
