@@ -71,7 +71,7 @@ article img {
     max-width: 1200px;
     /*margin-left: -600px;*/
     /*left: 50%;*/
-    top: 20vh;
+    top: 60vh;
     display: flex;
     flex-direction: column;
 }
@@ -363,7 +363,7 @@ h1 {
 h2 {
     font-family: 'Raleway', sans-serif;
     font-size: 1.5rem;
-    text-align: center;
+    /*    text-align: center;*/
     margin-top: 50px;
     margin-bottom: 25px;
 }
@@ -395,12 +395,11 @@ a {
 
 .catchphrase {
     position: absolute;
-    left: 50%;
-    top: 34%;
-    margin-left: -225px;
+    ;
+    margin-left: -50vw;
     font-size: 3rem;
     margin-top: 10vw;
-    left: 35%;
+    left: 50vw;
     top: 34%;
     font-size: 3rem;
 }
@@ -794,6 +793,18 @@ height: 250px;
 padding: 1vw;
 
 */
+
+    .catchphrase {
+        position: absolute;
+        ;
+        margin-left: -20vw;
+        font-size: 3rem;
+        margin-top: 10vw;
+        left: 50vw;
+        top: 34%;
+        font-size: 3rem;
+    }
+
     #content {
         margin-top: 80vh;
     }
