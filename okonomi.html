@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style>
+
         article {
             width: 90%;
             margin: 2vw;
@@ -40,7 +41,6 @@
             height: auto;
             margin: auto;
         }
-
     </style>
 </head>
 
@@ -277,7 +277,8 @@
         let splash
 
 
-        // Loopview'et henter title og splash billede fra de pages, vi har lavet.1. Lav en kategori i WordpressPages -> Categories -> Add New
+        // Loopview'et henter title og splash billede fra de pages, vi har lavet.
+        //1. Lav en kategori i WordpressPages -> Categories -> Add New
         //
         // 2.Tilføj pages til kategori. Pages -> Find page -> Sæt hak i Kategori ude til højre.
         //
@@ -325,9 +326,8 @@
                 let clone = template.cloneNode(true).content;
 
                 // Samme som før - Henvis til de elementer som skal hentes.
-                clone.querySelector(".overskrift").textContent = page.title.rendered;
-                //
-                // clone.querySelector(".billede").src = destination.better_featured_image.source_url;
+                clone.querySelector(".overskrift").textContent = page.title.rendered
+                 clone.querySelector(".billede").src = page.better_featured_image.source_url;
 
                 console.log("Kategori og slug hentes ned")
                 console.log(page, page.slug)
