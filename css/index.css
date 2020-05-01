@@ -70,8 +70,8 @@ article img {
     position: absolute;
     max-width: 1200px;
     /*margin-left: -600px;*/
-    /*left: 50%;*/
-    top: 60vh;
+
+    top: 40vh;
     display: flex;
     flex-direction: column;
 }
@@ -404,12 +404,13 @@ a {
     font-size: 3rem;
 }
 
+
 .header {
     position: absolute;
     left: 40%;
     top: 70%;
-    margin-left: -225px;
-    font-size: 5rem;
+    margin-left: -120px;
+    font-size: 4rem;
     color: white;
 }
 
@@ -427,6 +428,18 @@ a {
     margin-top: 10vh;
 }
 
+/*
+.overskrift {
+    color: white;
+    font-weight: 900;
+    position: absolute;
+    left: 15px;
+    font-size: 2.2rem;
+    bottom: 14px;
+    text-shadow: 3px 2px 0px rgba(0, 0, 0, 0.2);
+}
+*/
+
 .lwOverskrift {
     font-family: 'Raleway', sans-serif;
     z-index: 99;
@@ -437,6 +450,8 @@ a {
     bottom: 10%;
     left: 10%;
 }
+
+
 
 /*indretning*/
 .billede_indretning img {
@@ -499,7 +514,16 @@ a {
 
 #content {
     width: 70vw;
-    margin-top: 160vh;
+    margin-top: 90vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 30px;
+}
+
+#content_index {
+    width: 70vw;
+    margin-top: 130vh;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -558,13 +582,12 @@ a {
 .splash {
     width: 100vw;
     object-fit: cover;
-    height: 70vh;
-    /*   max-height: 90vh;
-    max-width: 1200px;*/
+    height: 150vh;
     top: 0;
     left: 0;
     Position: absolute;
     z-index: -99;
+
 }
 
 #splash {
@@ -700,7 +723,105 @@ a {
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 800px) and (max-width: 1300px) {
+
+    .splash {
+        width: 100vw;
+        object-fit: cover;
+        height: 56vw;
+        top: 0;
+        left: 0;
+        Position: absolute;
+        z-index: -99;
+    }
+
+    .header {
+        position: absolute;
+        left: 40%;
+        top: 70%;
+        margin-left: -225px;
+        font-size: 5rem;
+        color: white;
+    }
+
+
+    .catchphrase {
+        margin-left: -20vw;
+        font-size: 4rem;
+        margin-top: 7vw;
+    }
+
+    #content {
+        margin-top: 75vh;
+
+    }
+
+    .colWrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .galleri {
+        flex-direction: row;
+    }
+
+    .galleri {
+        margin-left: 1vw;
+    }
+
+    .tile {
+        height: 480px;
+        width: 550px;
+    }
+
+    .figur {
+        margin-top: 5vh;
+    }
+
+    .tekst {
+        font-size: 1.5rem;
+        margin-top: 1vh;
+    }
+
+    .pris {
+        margin-top: 1vh;
+        font-size: 2rem;
+    }
+
+
+    #img1 {
+        height: 605px;
+        width: 400px;
+    }
+
+    #img2 {
+        height: 300px;
+        width: 450px;
+        padding-top: 10px;
+    }
+
+    #img3 {
+        height: 300px;
+        width: 450px;
+    }
+
+    #img4 {
+        height: 605px;
+        width: 400px;
+    }
+
+    a {
+        font-size: 1.5rem;
+    }
+
+    .btm_navbar a {
+        font-size: 1rem;
+    }
+
+    .colWrapper {
+        display: flex;
+
+    }
 
     /****Knapper i Slideshow****/
     .prev,
@@ -710,6 +831,184 @@ a {
     }
 
     /********/
+    .tekstblok2 {
+        column-count: 2;
+    }
+
+    #tileContainer {
+
+        margin-left: 3vw;
+        top: 50vh;
+        display: flex;
+        flex-direction: row;
+    }
+
+    #instaBilleder {
+        width: 240px;
+        height: 240px;
+        padding: 1vw;
+        object-fit: cover;
+    }
+
+    #content #tekst_container {
+        margin-top: 80vh;
+        margin-bottom: 30px;
+    }
+
+    #content_liste {
+        position: absolute;
+        margin-top: 70vw;
+        padding: 40px;
+    }
+
+    #content_tekst {
+        margin-top: 5px;
+        margin-bottom: 30px;
+        line-height: 25px;
+    }
+
+    .billede {
+        padding-top: 5vw;
+        width: 100%;
+    }
+
+/*
+    .overskrift {
+        color: black;
+        font-weight: 900;
+        position: absolute;
+        left: 15px;
+        font-size: 2rem;
+        bottom: 19px;
+        text-shadow: 3px 2px 0px rgba(0, 0, 0, 0.2);
+    }
+*/
+
+
+}
+
+
+@media screen and (min-width: 600px) {
+    #menuknap {
+        display: none;
+    }
+
+    #menuknap {
+        display: none;
+    }
+
+    #menu {
+        height: 4vh;
+        width: 70vw;
+        display: flex;
+        flex-direction: row-reverse;
+        background-color: white;
+        padding-right: 4vw;
+        position: static;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+
+
+    .dropdown .dropbtn {
+        font-size: 16px;
+        border: none;
+        outline: none;
+        color: white;
+        background-color: white;
+        font-family: inherit;
+        margin: 0;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 4px;
+    }
+
+    .lwOverskrift {
+        font-family: 'Raleway', sans-serif;
+        z-index: 99;
+        position: absolute;
+        color: white;
+        font-weight: 800;
+        font-size: 2rem;
+        bottom: 10%;
+        left: 10%;
+    }
+}
+
+
+
+@media screen and (min-width: 1400px) and (max-width: 2000px) {
+    #tileContainer {
+        margin: 5vh 0 0 28vw;
+    }
+
+    .catchphrase {
+        margin-left: 5vw;
+        font-size: 4rem;
+    }
+
+    #content {
+        margin-top: 100vh;
+    }
+
+    .galleri {
+        margin-left: 10vw;
+    }
+
+    .tile {
+        height: 480px;
+        width: 550px;
+    }
+
+    .figur {
+        margin-top: 5vh;
+    }
+
+    .tekst {
+        font-size: 1.5rem;
+        margin-top: 1vh;
+    }
+
+    .header {
+        position: absolute;
+        left: 40%;
+        top: 70%;
+        margin-left: -225px;
+        font-size: 5rem;
+        color: white;
+    }
+
+    .pris {
+        margin-top: 1vh;
+        font-size: 2rem;
+    }
+
+    .lwOverskrift {
+        font-family: 'Raleway', sans-serif;
+        z-index: 99;
+        position: absolute;
+        color: white;
+        font-weight: 800;
+        font-size: 2rem;
+        bottom: 10%;
+        left: 10%;
+    }
+}
+
+
+/*@media screen and (max-width: 600px) {
+
+    ***Knapper i Slideshow***
+    .prev,
+    .next,
+    .text {
+        font-size: 11px
+    }
+
+
     .tekstblok2 {
         column-count: 2;
     }
@@ -744,12 +1043,12 @@ a {
         line-height: 25px;
     }
 
-    /*
+
 
     #content_tekst .underoverskrift {
         text-align: left;
     }
-*/
+
     .colWrapper {
         display: flex;
         flex-direction: column;
@@ -788,11 +1087,7 @@ a {
         font-size: 1rem;
     }
 
-    /*width: 250px;
-height: 250px;
-padding: 1vw;
 
-*/
 
     .catchphrase {
         position: absolute;
@@ -846,92 +1141,61 @@ padding: 1vw;
     .btm_navbar a {
         font-size: 1rem;
     }
+}*/
+
+/*----------Ipad--------*/
+/*
+@media screen and (max-width:800px) {
+    #menuknap {
+        display: none;
+    }
+
+    #menuknap {
+        display: none;
+    }
+
+    #menu {
+        height: 4vh;
+        width: 70vw;
+        display: flex;
+        flex-direction: row-reverse;
+        background-color: white;
+        padding-right: 4vw;
+        position: static;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
 }
-    /*----------Ipad--------*/
-    @media screen and (max-width:800px) {
-        #menuknap {
-            display: none;
-        }
+*/
 
-        #menuknap {
-            display: none;
-        }
-
-        #menu {
-            height: 4vh;
-            width: 70vw;
-            display: flex;
-            flex-direction: row-reverse;
-            background-color: white;
-            padding-right: 4vw;
-            position: static;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
+/*----------- L desktop -1600x900-------------*/
+/*
+@media screen and (max-width:1600px) {
+    #content {
+        margin-top: 60vh;
     }
 
-    /*----------- L desktop -1600x900-------------*/
-    @media screen and (max-width:1600px) {
-        #content {
-            margin-top: 60vh;
-        }
-
-        .catchphrase {
-            margin-left: 2vw;
-        }
-
-        .galleri {
-            margin-left: -1vw;
-        }
+    .catchphrase {
+        margin-left: 2vw;
     }
 
-    /*----------- NORMAL desktop -1920x1080-------------*/
-    @media screen and (max-width:1800px) {
-        #tileContainer {
-            margin-left: 20vw;
-        }
+    .galleri {
+        margin-left: -1vw;
+    }
+}
+*/
 
-        .catchphrase {
-            margin-left: 2vw;
-        }
+/*----------- NORMAL desktop -1920x1080-------------*/
+/*
+@media screen and (max-width:1800px) {
+    #tileContainer {
+        margin-left: 20vw;
     }
 
-    /*----------- 4K desktop -2560x1641-------------*/
-    @media screen and (max-width:2000px) {
-        #tileContainer {
-            margin: 5vh 0 0 28vw;
-        }
-
-        .catchphrase {
-            margin-left: 5vw;
-            font-size: 4rem;
-        }
-
-        #content {
-            margin-top: 100vh;
-        }
-
-        .galleri {
-            margin-left: 10vw;
-        }
-
-        .tile {
-            height: 480px;
-            width: 550px;
-        }
-
-        .figur {
-            margin-top: 5vh;
-        }
-
-        .tekst {
-            font-size: 1.5rem;
-            margin-top: 1vh;
-        }
-
-        .pris {
-            margin-top: 1vh;
-            font-size: 2rem;
-        }
+    .catchphrase {
+        margin-left: 2vw;
+    }
+}
+*/

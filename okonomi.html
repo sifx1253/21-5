@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style>
-
         article {
             width: 90%;
             margin: 2vw;
@@ -91,10 +90,11 @@
 
                 <div class="dropdown">
                     <button class="dropbtn">
-                        <a href="om-os.html">Om Os</a>
+                        <a href="om.html">Om Os</a>
                         <i class="fa fa-caret-down"></i>
                     </button>
                     <div class="dropdown-content">
+                        <a href="om-os.html">Om Os</a>
                         <a href="21-5teamet.html">21-5 Teamet</a>
                         <a href="mangler.html">Hvem er 21-5 for?</a>
                         <a href="det_siger.html">Det siger vores 21-5 familier</a>
@@ -327,7 +327,7 @@
 
                 // Samme som før - Henvis til de elementer som skal hentes.
                 clone.querySelector(".overskrift").textContent = page.title.rendered
-                 clone.querySelector(".billede").src = page.better_featured_image.source_url;
+                clone.querySelector(".billede").src = page.better_featured_image.source_url;
 
                 console.log("Kategori og slug hentes ned")
                 console.log(page, page.slug)
@@ -381,12 +381,9 @@
                 document.querySelector("#menuknap").textContent = "☰";
             }
         }
-
     </script>
 
 
     <!-- HTML SLUT -->
 
-</body>
-
-</html>
+</body></html>
