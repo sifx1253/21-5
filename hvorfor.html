@@ -257,10 +257,10 @@
             destinationer = await response1.json();
             permanentIndhold = await response2.json();
             splash = await response4.json();
+            toggleMenu();
             visSplash();
             visDestinationer();
             visPermanentIndhold();
-            toggleMenu();
 
         }
 
@@ -323,9 +323,9 @@
             let erSkjult = document.querySelector("#menu").classList.contains("hidden");
 
             if (erSkjult == true) {
-                document.querySelector("#menuknap").textContent = "X";
-            } else {
                 document.querySelector("#menuknap").textContent = "☰";
+            } else {
+                document.querySelector("#menuknap").textContent = "X";
             }
         }
     </script>

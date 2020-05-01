@@ -290,24 +290,28 @@
         // Samme som før
         let pages
         let permanentIndhold
+        let splash
 
 
 
 
         let url1 = "http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/skrot-lande";
         let url2 = "http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/karrusel/781";
-
+        let url3 = "http://slodberg.dk/kea/2sm/09-tema/21-5-kode/wordpress/wp-json/wp/v2/media/1620";
 
 
         // Samme som før
         async function start() {
             let response1 = await fetch(url1);
             let response2 = await fetch(url2);
+            let response3 = await fetch(url3);
             pages = await response1.json();
             permanentIndhold = await response2.json();
+            splash = await response3.json();
             visPages();
             visPermanentIndhold();
             toggleMenu();
+            visSplash();
         }
 
 
@@ -339,6 +343,11 @@
             console.log("Husk nu at rette HTMLen!")
         }
 
+                function visSplash() {
+                    console.log("splash loades")
+                    document.querySelector("#splash").src = splash.guid.rendered;
+
+                }
 
 
         // Permanent indhold hentes i Footer funktionenen

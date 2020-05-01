@@ -1,5 +1,5 @@
 *,
-body {
+body, html {
     text-decoration: none;
     padding: 0;
     margin: 0;
@@ -411,7 +411,7 @@ a {
     left: 40%;
     top: 70%;
     margin-left: -120px;
-    font-size: 4rem;
+    font-size: 4vw;
     color: white;
 }
 
@@ -516,7 +516,7 @@ a {
 }
 
 #content {
-    width: 70vw;
+    width: 100vw;
     margin-top: 90vh;
     display: block;
     margin-left: auto;
@@ -896,7 +896,7 @@ a {
 }
 
 
-@media screen and (min-width: 300px) {
+@media screen and (min-width: 500px) {
     #menuknap {
         display: none;
     }
@@ -987,7 +987,7 @@ a {
     }
 
 
-    .tile {
+    #tile {
         height: 480px;
         width: 550px;
     }
