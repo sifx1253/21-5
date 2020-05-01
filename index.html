@@ -9,7 +9,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;3000,800;0,900;1,600;1,700;1,800;1,900&family=Raleway:wght@200;300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-
+<style media="screen">
+/* OVERRIDER VORES GENERELLE POD OPSTILLING */
+article img {
+  height: auto;
+  width: 100%;
+}
+</style>
 </head>
 
 <body>
@@ -183,11 +189,11 @@
 
 
     <template>
-        <article class="tile">
+        <article id="tile">
             <h1 class="kategori"></h1>
             <p class="tekst"></p>
             <h3 class="pris"></h3>
-            <img class="figur">
+            <img id="figur">
         </article>
     </template>
 
@@ -370,7 +376,7 @@
                 clone.querySelector(".kategori").textContent = tile.familieoverskrift;
                 clone.querySelector(".tekst").textContent = tile.familietekst;
                 clone.querySelector(".pris").textContent = tile.familiepris;
-                clone.querySelector(".figur").src = tile.familiefigur.guid;
+                clone.querySelector("#figur").src = tile.familiefigur.guid;
 
                 console.log("Kategori og slug hentes ned")
                 console.log(tile, tile.slug)

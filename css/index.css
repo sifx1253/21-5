@@ -57,8 +57,8 @@ article img {
     z-index: 99;
 }
 */
-.tile {
-    height: 330px;
+#tile {
+    height: 350px;
     width: 350px;
     margin-left: 12px;
     margin-right: 12px;
@@ -773,10 +773,14 @@ a {
         margin-left: 1vw;
     }
 
-    .tile {
+    #tile {
         height: 480px;
         width: 550px;
     }
+
+        #tile .figur {
+            width: 100%;
+        }
 
     .figur {
         margin-top: 5vh;
