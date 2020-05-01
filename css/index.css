@@ -43,7 +43,8 @@ overflow-x: hidden;*/
 }
 
 article img {
-    width: 100%;
+  height: 100%;
+  width:450px;
 }
 
 /*
@@ -83,7 +84,7 @@ article img {
 article {
     overflow: hidden;
     position: relative;
-    height: 100%;
+    height: 500px;
     width: 100%;
     /*    margin: 25px;*/
     background-color: white;
@@ -108,7 +109,6 @@ article {
 
 .billede {
     padding-top: 5vw;
-    width: 80%;
 }
 
 /* Skrot oversigt LOOPVIEW */
