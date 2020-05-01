@@ -723,6 +723,7 @@ a {
     }
 }
 
+/**FÆRDIG VERSION!!! NIX PILLE!****/
 @media screen and (min-width: 800px) and (max-width: 1300px) {
 
     .splash {
@@ -872,7 +873,7 @@ a {
         width: 100%;
     }
 
-/*
+    /*
     .overskrift {
         color: black;
         font-weight: 900;
